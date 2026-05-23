@@ -1,8 +1,17 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    setIsReady(true);
+  }, []);
+
   return (
-    <main className="home-page">
+    <main className={`home-page ${isReady ? "home-ready" : "home-loading"}`}>
       <video
         className="hero-video"
         autoPlay

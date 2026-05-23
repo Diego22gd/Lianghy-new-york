@@ -153,6 +153,17 @@ body:has(.home-page) .site-nav-links::before {
   background: radial-gradient(circle at top right, rgba(138, 69, 82, 0.08), transparent 42%);
 }
 
+body:has(.home-page) .site-nav-links {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+body:has(.home-page) .site-nav-links::before {
+  display: none;
+}
+
 .brand-mark,
 .nav-link,
 .nav-dropdown-item,
@@ -389,6 +400,14 @@ body:has(.home-page) .hero-logo-large {
   opacity: 1;
   transform: none;
   transition: none;
+}
+
+.home-page.home-loading .hero-logo,
+.home-page.home-loading .hero-logo-large,
+.home-page.home-loading .hero-copy,
+.home-page.home-loading .hero-eyebrow,
+.home-page.home-loading .hero-copy p {
+  opacity: 0;
 }
 
 body:has(.home-page) .hero-logo-large {
@@ -1467,7 +1486,7 @@ body:has(.home-page) .hero-logo-large {
   .home-page {
     height: 100dvh;
     min-height: 100dvh;
-    padding: 0.5rem 0.75rem 0.75rem;
+    padding: 0;
   }
 
   .hero-video {
@@ -1479,6 +1498,17 @@ body:has(.home-page) .hero-logo-large {
   .hero-content-minimal {
     min-height: 100dvh;
     width: 100%;
+  }
+
+  body:has(.home-page) .site-nav-links {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  body:has(.home-page) .site-nav-links::before {
+    display: none;
   }
 
   .portfolio-page {
