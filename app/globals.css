@@ -129,11 +129,28 @@ body:has(.home-page) .site-header {
 }
 
 body:has(.home-page) .site-nav {
-  color: #fff9f2;
+  color: var(--accent);
   border-color: transparent;
   background: transparent;
   backdrop-filter: none;
   box-shadow: none;
+}
+
+body:has(.home-page) .nav-toggle,
+body:has(.home-page) .nav-link,
+body:has(.home-page) .nav-dropdown-item,
+body:has(.home-page) .nav-summary {
+  color: var(--accent);
+}
+
+body:has(.home-page) .site-nav-links {
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.88), transparent 38%),
+    linear-gradient(180deg, rgba(255, 249, 242, 0.98), rgba(244, 234, 223, 0.94));
+}
+
+body:has(.home-page) .site-nav-links::before {
+  background: radial-gradient(circle at top right, rgba(138, 69, 82, 0.08), transparent 42%);
 }
 
 .brand-mark,
@@ -275,7 +292,8 @@ body:has(.home-page) .nav-dropdown-item.is-placeholder {
 
 .home-page {
   position: relative;
-  height: 100svh;
+  height: 100dvh;
+  min-height: 100dvh;
   overflow: hidden;
   display: grid;
   place-items: center;
@@ -359,6 +377,23 @@ body:has(.home-page) .nav-dropdown-item.is-placeholder {
 .hero-logo-large {
   filter: drop-shadow(0 12px 32px rgba(92, 26, 40, 0.28));
   margin-top: -1.9rem;
+}
+
+body:has(.home-page) .logo-halo {
+  display: none;
+}
+
+body:has(.home-page) .hero-logo,
+body:has(.home-page) .hero-logo-large {
+  animation: none;
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+body:has(.home-page) .hero-logo-large {
+  margin-top: 0;
+  filter: none;
 }
 
 .hero-copy {
@@ -1427,6 +1462,23 @@ body:has(.home-page) .nav-dropdown-item.is-placeholder {
 
   .hero-logo-large {
     width: min(320px, 76vw);
+  }
+
+  .home-page {
+    height: 100dvh;
+    min-height: 100dvh;
+    padding: 0.5rem 0.75rem 0.75rem;
+  }
+
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-position: center center;
+  }
+
+  .hero-content-minimal {
+    min-height: 100dvh;
+    width: 100%;
   }
 
   .portfolio-page {
