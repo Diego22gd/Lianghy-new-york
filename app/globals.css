@@ -260,8 +260,10 @@ body:has(.home-page) .site-nav-links::before {
 }
 
 body:has(.home-page) .nav-dropdown-menu {
-  background: rgba(255, 248, 240, 0.96);
-  border-color: rgba(92, 26, 40, 0.16);
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 body:has(.home-page) .nav-dropdown-item {
