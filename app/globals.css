@@ -1525,14 +1525,17 @@ body:has(.home-page) .hero-logo-large {
   }
 
   body:has(.home-page) .site-nav-links {
-    background: transparent;
-    border-color: transparent;
-    box-shadow: none;
-    backdrop-filter: none;
+    background:
+      radial-gradient(circle at top left, rgba(255, 255, 255, 0.82), transparent 38%),
+      linear-gradient(180deg, rgba(255, 249, 242, 0.98), rgba(244, 234, 223, 0.94));
+    border: 1px solid rgba(92, 26, 40, 0.12);
+    box-shadow: 0 30px 90px rgba(63, 13, 23, 0.24);
+    backdrop-filter: blur(24px) saturate(1.18);
   }
 
   body:has(.home-page) .site-nav-links::before {
-    display: none;
+    display: block;
+    background: radial-gradient(circle at top right, rgba(138, 69, 82, 0.1), transparent 42%);
   }
 
   .portfolio-page {
