@@ -85,7 +85,7 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
   }, [selectedIndex, activeAssetsList]);
 
   const galleryAssets = assets;
-  const featuredAssets = assets.slice(0, Math.max(assets.length, 1));
+  const featuredAssets = assets.filter((asset) => !asset.excludeFromCarousel);
   const heroAsset = assets[0];
 
   const openAsset = (asset: PortfolioAsset, sessionList?: PortfolioAsset[]) => {
@@ -156,8 +156,8 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
               {module.subtitle}
             </motion.p>
             <motion.div className="portfolio-action-row" initial={false} animate={canAnimate ? { opacity: [0, 1], y: [14, 0] } : undefined} transition={{ duration: 0.7, delay: 0.28, ease }}>
-              <a className="portfolio-link" href="#portfolio-gallery">
-                View Gallery
+              <a className="portfolio-link" href={sessionGroups.length > 0 ? "#portfolio-sessions" : "#portfolio-gallery"}>
+                {sessionGroups.length > 0 ? "View Sessions" : "View Gallery"}
               </a>
               <a className="portfolio-link portfolio-link-secondary" href="#portfolio-carousel">
                 View Sequence
@@ -166,14 +166,14 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
           </motion.div>
         </section>
 
-        {/* Mobile Session Grouping View for Editorial / Multi-Session Modules */}
+        {/* Sessions Grid View for PC and Mobile */}
         {sessionGroups.length > 0 ? (
-          <section className="portfolio-section portfolio-mobile-sessions" id="portfolio-sessions">
+          <section className="portfolio-section portfolio-sessions" id="portfolio-sessions">
             <div className="portfolio-section-head">
               <div>
                 <span className="portfolio-script-note">Sessions</span>
                 <h2>Editorial Sessions</h2>
-                <p>Tap a session date to view its full gallery.</p>
+                <p>Click any session to view its full gallery.</p>
               </div>
             </div>
 
@@ -186,7 +186,7 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
                     onClick={() => openAsset(session.cover, session.assets)}
                   >
                     <img
-                      src={withTransform(session.cover.imageUrl, "f_auto,q_auto,c_fill,g_auto,w_800,h_1000")}
+                      src={withTransform(session.cover.imageUrl, "f_auto,q_auto,c_fill,g_auto:subject,w_650,h_780")}
                       alt={session.name}
                       loading="lazy"
                     />
@@ -201,15 +201,14 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
               ))}
             </div>
           </section>
-        ) : null}
-
-        <section className="portfolio-section portfolio-desktop-gallery" id="portfolio-gallery">
-          <div className="portfolio-section-head">
-            <div>
-              <span className="portfolio-script-note">Gallery</span>
-              <h2>{module.galleryHeading}</h2>
+        ) : (
+          <section className="portfolio-section portfolio-desktop-gallery" id="portfolio-gallery">
+            <div className="portfolio-section-head">
+              <div>
+                <span className="portfolio-script-note">Gallery</span>
+                <h2>{module.galleryHeading}</h2>
+              </div>
             </div>
-          </div>
 
           <div className="portfolio-gallery-grid">
             {galleryAssets.map((asset, index) => (
@@ -238,6 +237,7 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
             ))}
           </div>
         </section>
+        )}
 
         <section className="portfolio-section portfolio-desktop-gallery" id="portfolio-carousel">
           <div className="portfolio-section-head">
