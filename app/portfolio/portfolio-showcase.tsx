@@ -362,7 +362,6 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
               height={currentAsset.height}
             />
             <div className="portfolio-lightbox-caption">
-              <span>{currentAsset.sessionName || currentAsset.title}</span>
               <p>{selectedIndex + 1} / {activeAssetsList.length}</p>
             </div>
           </div>
