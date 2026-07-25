@@ -1254,41 +1254,107 @@ body:has(.home-page) .logo-halo {
 .portfolio-lightbox {
   position: fixed;
   inset: 0;
-  z-index: 40;
-  display: grid;
-  place-items: center;
-  padding: 1.5rem;
-  background: rgba(18, 7, 9, 0.92);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(14, 5, 8, 0.95);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .portfolio-lightbox-stage {
   position: relative;
-  width: min(96vw, 1300px);
-  max-height: calc(100vh - 3.5rem);
+  width: 100%;
+  max-width: min(94vw, 1200px);
+  max-height: calc(100vh - 4rem);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .portfolio-lightbox-image {
-  width: 100%;
-  max-height: calc(100vh - 4rem);
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(82vh - 2rem);
   object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio-lightbox-caption {
+  width: 100%;
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.portfolio-lightbox-caption p {
+  margin: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: rgba(255, 248, 240, 0.85);
+  font-weight: 500;
 }
 
 .portfolio-lightbox-close {
   position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  z-index: 1;
-  min-height: 2.75rem;
-  padding: 0.75rem 1rem;
-  border: 1px solid rgba(255, 248, 240, 0.18);
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 248, 240, 0.2);
   background: rgba(255, 248, 240, 0.12);
   color: #fff8f2;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 200ms ease;
+}
+
+.portfolio-lightbox-close:hover {
+  background: rgba(255, 248, 240, 0.25);
+}
+
+.portfolio-lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 248, 240, 0.15);
+  border: 1px solid rgba(255, 248, 240, 0.25);
+  color: #fff8f2;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 200ms ease;
+}
+
+.portfolio-lightbox-nav:hover {
+  background: rgba(255, 248, 240, 0.3);
+}
+
+.portfolio-lightbox-prev {
+  left: 0.75rem;
+}
+
+.portfolio-lightbox-next {
+  right: 0.75rem;
 }
 
 @keyframes logoFloat {

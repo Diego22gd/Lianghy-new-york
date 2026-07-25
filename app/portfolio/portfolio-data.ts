@@ -203,7 +203,20 @@ export const curatedAssets: PortfolioAsset[] = [
 ];
 
 export const editorialAssets: PortfolioAsset[] = [
-  // Primary Editorial Cover Look & Series II - Part 1 (Fotos 1, 2, 3)
+  // Primary Editorial Hero Cover (3rd photo of Series II - Part 1)
+  {
+    id: "edit-series-2-3",
+    title: "Editorial Look 05",
+    label: "Editorial",
+    note: "Clean editorial beauty direction.",
+    alt: "Editorial makeup look",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1784771435/Photo_Jul_20_2026_8_44_24_PM_4_ncpxxc.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "series-ii-a",
+    sessionName: "Editorial Series II - Part 1",
+    sessionDate: "Collection II-A",
+  },
   {
     id: "edit-series-2-1",
     title: "Editorial Look 01",
@@ -265,19 +278,6 @@ export const editorialAssets: PortfolioAsset[] = [
     note: "Clean editorial beauty direction.",
     alt: "Editorial makeup look",
     imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1784771439/Photo_Jul_20_2026_8_44_24_PM_5_ezb9fj.jpg",
-    width: 1400,
-    height: 1750,
-    sessionId: "series-ii-a",
-    sessionName: "Editorial Series II - Part 1",
-    sessionDate: "Collection II-A",
-  },
-  {
-    id: "edit-series-2-3",
-    title: "Editorial Look 05",
-    label: "Editorial",
-    note: "Clean editorial beauty direction.",
-    alt: "Editorial makeup look",
-    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1784771435/Photo_Jul_20_2026_8_44_24_PM_4_ncpxxc.jpg",
     width: 1400,
     height: 1750,
     sessionId: "series-ii-a",
