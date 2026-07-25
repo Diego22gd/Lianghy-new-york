@@ -5,30 +5,30 @@ import { motion, useReducedMotion } from "framer-motion";
 const contactItems = [
   {
     label: "Email",
-    value: "lianghy.mua@gmail.com",
-    href: "mailto:lianghy.mua@gmail.com",
-    icon: "✉",
+    value: "lianghym14@gmail.com",
+    href: "mailto:lianghym14@gmail.com",
+    iconSrc: "/icons/email.png",
     external: false,
   },
   {
     label: "Instagram",
-    value: "@lianghy.mua",
-    href: "https://instagram.com/lianghy.mua",
-    icon: "◎",
+    value: "@lianghyy",
+    href: "https://instagram.com/lianghyy",
+    iconSrc: "/icons/instagram.png",
     external: true,
   },
   {
     label: "WhatsApp",
-    value: "Message me directly on WhatsApp.",
-    href: "https://wa.me/",
-    external: false,
-    icon: "◌",
+    value: "+1 (786) 967-4376",
+    href: "https://wa.me/17869674376",
+    iconSrc: "/icons/whatsapp.png",
+    external: true,
   },
   {
     label: "Location",
     value: "New York City, available for destination bookings.",
     href: "https://maps.google.com/?q=New+York+City",
-    icon: "⌂",
+    iconSrc: "/icons/location.png",
     external: true,
   },
 ] as const;
@@ -84,7 +84,7 @@ export default function ContactPage() {
                 {...revealUp(0.18 + index * 0.08)}
               >
                 <span className="contact-item-icon" aria-hidden="true">
-                  {item.icon}
+                  <img src={item.iconSrc} alt={`${item.label} icon`} className="contact-icon-img" />
                 </span>
                 <span className="contact-item-copy">
                   <strong>{item.label}</strong>

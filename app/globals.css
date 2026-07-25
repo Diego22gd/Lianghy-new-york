@@ -885,13 +885,20 @@ body:has(.home-page) .logo-halo {
   flex-shrink: 0;
   width: 3.5rem;
   height: 3.5rem;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(92, 26, 40, 0.2);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.44);
-  color: var(--accent);
-  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 14px rgba(63, 13, 23, 0.06);
+}
+
+.contact-icon-img {
+  width: 1.65rem;
+  height: 1.65rem;
+  object-fit: contain;
+  display: block;
 }
 
 .contact-item-copy {
