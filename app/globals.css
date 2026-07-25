@@ -721,31 +721,7 @@ body:has(.home-page) .logo-halo {
 }
 
 .about-inline-photo {
-  position: relative;
-  width: 100%;
-  max-width: 48ch;
-  min-height: 280px;
-  aspect-ratio: 4 / 3;
-  margin: 0.75rem 0 1.25rem;
-  overflow: hidden;
-  border-radius: 6px;
-  border: 1px solid rgba(92, 26, 40, 0.12);
-  box-shadow: 0 12px 35px rgba(63, 13, 23, 0.1);
-  background: rgba(92, 26, 40, 0.04);
-}
-
-.about-inline-photo img {
-  width: 100%;
-  height: 100%;
-  min-height: 280px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.about-inline-photo:hover img {
-  transform: scale(1.03);
+  display: none;
 }
 
 .about-paragraph-stack p,
@@ -1664,6 +1640,30 @@ body:has(.home-page) .logo-halo {
 
   .about-paragraph-stack p {
     max-width: none;
+  }
+
+  .about-inline-photo {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-height: 240px;
+    aspect-ratio: 4 / 3;
+    margin: 1rem 0 1.5rem;
+    overflow: hidden;
+    border-radius: 6px;
+    border: 1px solid rgba(92, 26, 40, 0.12);
+    box-shadow: 0 12px 35px rgba(63, 13, 23, 0.1);
+    background: rgba(92, 26, 40, 0.04);
+  }
+
+  .about-inline-photo img {
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
   }
 
   .about-editorial,
