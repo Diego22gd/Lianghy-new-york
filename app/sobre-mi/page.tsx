@@ -15,17 +15,17 @@ type AboutMediaItem = {
 const aboutParagraphs = [
   {
     text: "I am a professional makeup artist, hairstylist and content creator with over 5 years of experience, focused on creating looks that elevate each client's natural beauty.",
-    image: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1784902703/Photo_Jul_21_2026_11_33_27_AM_xeuptb.jpg",
+    image: "https://res.cloudinary.com/dqcpmau9i/image/upload/f_auto,q_auto/v1784902703/Photo_Jul_21_2026_11_33_27_AM_xeuptb.jpg",
     alt: "Editorial makeup detail 1",
   },
   {
     text: "My approach combines creativity, attention to detail, polished skin and techniques tailored to the mood, light and rhythm of every booking.",
-    image: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1784902705/Photo_Jul_21_2026_11_33_27_AM_3_s2zyqb.jpg",
+    image: "https://res.cloudinary.com/dqcpmau9i/image/upload/f_auto,q_auto/v1784902705/Photo_Jul_21_2026_11_33_27_AM_3_s2zyqb.jpg",
     alt: "Editorial makeup detail 2",
   },
   {
     text: "Alongside client work, I test and review beauty products with an honest eye so I can recommend the right finish, texture and overall balance for each look.",
-    image: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1784902706/Photo_Jul_21_2026_11_33_27_AM_5_lrqdgf.jpg",
+    image: "https://res.cloudinary.com/dqcpmau9i/image/upload/f_auto,q_auto/v1784902706/Photo_Jul_21_2026_11_33_27_AM_5_lrqdgf.jpg",
     alt: "Editorial makeup detail 3",
   },
 ];
@@ -167,12 +167,10 @@ export default function AboutPage() {
           <div className="about-paragraph-stack">
             {aboutParagraphs.map((item, index) => (
               <div key={index} className="about-paragraph-block">
-                <motion.p {...revealUp(0.14 + index * 0.08)}>
-                  {item.text}
-                </motion.p>
-                <motion.div className="about-inline-photo" {...revealUp(0.18 + index * 0.08)}>
-                  <img src={item.image} alt={item.alt} loading="lazy" />
-                </motion.div>
+                <p>{item.text}</p>
+                <div className="about-inline-photo">
+                  <img src={item.image} alt={item.alt} />
+                </div>
               </div>
             ))}
           </div>
