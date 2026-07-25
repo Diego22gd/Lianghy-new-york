@@ -871,43 +871,20 @@ body:has(.home-page) .logo-halo {
   display: flex;
   align-items: center;
   gap: 1.15rem;
-  padding: 1.15rem 1.25rem;
-  margin: 0.25rem -1.25rem;
-  border-radius: 16px;
-  border: 1px solid rgba(92, 26, 40, 0.14);
-  background: rgba(255, 248, 240, 0.55);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 18px rgba(63, 13, 23, 0.04);
-  transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
-              background 300ms ease,
-              border-color 300ms ease,
-              box-shadow 300ms ease;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid rgba(92, 26, 40, 0.16);
+  background: transparent;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(92, 26, 40, 0.16);
+  box-shadow: none;
+  transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1), opacity 260ms ease;
   position: relative;
-  overflow: hidden;
-}
-
-.contact-editorial-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
-  transform: skewX(-20deg);
-  transition: left 650ms ease;
-}
-
-.contact-editorial-item:hover::before {
-  left: 140%;
 }
 
 .contact-editorial-item:hover {
-  transform: translateY(-2px) translateX(6px);
-  background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(92, 26, 40, 0.38);
-  box-shadow: 0 12px 32px rgba(63, 13, 23, 0.12);
+  transform: translateX(0.5rem);
+  opacity: 0.95;
 }
 
 .contact-item-icon {
