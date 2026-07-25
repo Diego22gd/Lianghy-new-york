@@ -871,12 +871,9 @@ body:has(.home-page) .logo-halo {
   display: flex;
   align-items: center;
   gap: 1.15rem;
-  padding: 1.1rem 0;
-  border-bottom: 1px solid rgba(92, 26, 40, 0.16);
+  padding: 0.85rem 0;
   background: transparent;
-  border-radius: 0;
   border: 0;
-  border-bottom: 1px solid rgba(92, 26, 40, 0.16);
   box-shadow: none;
   transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1), opacity 260ms ease;
   position: relative;
@@ -931,21 +928,6 @@ body:has(.home-page) .logo-halo {
   max-width: none;
   font-size: 0.92rem;
   color: var(--muted);
-}
-
-.contact-item-arrow {
-  margin-left: auto;
-  font-size: 1.15rem;
-  color: var(--accent);
-  opacity: 0.5;
-  transform: translateX(0);
-  transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1), opacity 250ms ease, color 250ms ease;
-}
-
-.contact-editorial-item:hover .contact-item-arrow {
-  opacity: 1;
-  transform: translateX(6px);
-  color: var(--accent-deep);
 }
 
 @keyframes contactIconBreathing {

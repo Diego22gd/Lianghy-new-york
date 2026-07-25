@@ -90,9 +90,6 @@ export default function ContactPage() {
                   <strong>{item.label}</strong>
                   <span>{item.value}</span>
                 </span>
-                <span className="contact-item-arrow" aria-hidden="true">
-                  ➔
-                </span>
               </motion.a>
             ))}
           </div>
