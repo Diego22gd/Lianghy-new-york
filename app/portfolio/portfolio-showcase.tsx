@@ -192,9 +192,6 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
                     />
                     <div className="portfolio-session-overlay">
                       <span className="portfolio-session-badge">{session.count} Photos</span>
-                      <div className="portfolio-session-info">
-                        <h3>{session.name}</h3>
-                      </div>
                     </div>
                   </button>
                 </article>
