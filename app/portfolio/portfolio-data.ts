@@ -20,6 +20,7 @@ export type PortfolioAsset = {
   sessionDate?: string;
   isSessionCover?: boolean;
   excludeFromCarousel?: boolean;
+  isVideo?: boolean;
 };
 
 export type PortfolioModule = {
