@@ -1337,12 +1337,13 @@ body:has(.home-page) .logo-halo {
   height: 640px;
   max-height: 75vh;
   overflow: hidden;
-  border-radius: 20px;
-  background: rgba(28, 12, 16, 0.05);
+  border-radius: 0;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
+  border: none;
 }
 
 .portfolio-swiper-card .portfolio-media-trigger {
@@ -2113,7 +2114,7 @@ body:has(.home-page) .logo-halo {
   aspect-ratio: 4 / 4.8;
   max-height: 320px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 15%;
   display: block;
   transition: transform 0.6s ease;
 }

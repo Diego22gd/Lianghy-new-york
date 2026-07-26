@@ -85,7 +85,7 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
   }, [selectedIndex, activeAssetsList]);
 
   const galleryAssets = assets;
-  const featuredAssets = assets.filter((asset) => !asset.excludeFromCarousel);
+  const featuredAssets = assets.filter((asset) => !asset.excludeFromCarousel && !asset.isVideo);
   const heroAsset = assets[0];
 
   const openAsset = (asset: PortfolioAsset, sessionList?: PortfolioAsset[]) => {
@@ -379,13 +379,16 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
             {currentAsset.isVideo ? (
               <video
                 className="portfolio-lightbox-image"
-                src={currentAsset.imageUrl}
                 controls
                 autoPlay
                 loop
                 playsInline
+                preload="metadata"
                 style={{ maxHeight: "calc(82vh - 2rem)", maxWidth: "100%", borderRadius: "8px" }}
-              />
+              >
+                <source src={currentAsset.imageUrl} type="video/mp4" />
+                Tu navegador no soporta la reproducción de video.
+              </video>
             ) : (
               <img
                 className="portfolio-lightbox-image"
