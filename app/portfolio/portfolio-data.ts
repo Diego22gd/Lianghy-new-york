@@ -523,6 +523,154 @@ export const editorialAssets: PortfolioAsset[] = [
   },
 ];
 
+export const timelessAssets: PortfolioAsset[] = [
+  // Session 1: Timeless Series I
+  {
+    id: "tb-1-photo",
+    title: "Timeless Look 01",
+    label: "Timeless",
+    note: "Classic beauty direction with refined finish.",
+    alt: "Timeless beauty portrait",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1785101720/Photo_Apr_25_2026_1_44_28_PM_ngurum.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "tb-series-1",
+    sessionName: "Timeless Series I",
+    sessionDate: "Collection I",
+    isSessionCover: true,
+  },
+  {
+    id: "tb-1-video",
+    title: "Timeless Look 01 - Video",
+    label: "Timeless",
+    note: "Video capture of timeless look.",
+    alt: "Timeless beauty video",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/video/upload/v1785101721/Video_Apr_25_2026_1_44_19_PM_gdoga3.mov",
+    width: 1080,
+    height: 1920,
+    sessionId: "tb-series-1",
+    sessionName: "Timeless Series I",
+    sessionDate: "Collection I",
+    isVideo: true,
+  },
+
+  // Session 2: Timeless Series II
+  {
+    id: "tb-2-photo1",
+    title: "Timeless Look 02",
+    label: "Timeless",
+    note: "Classic beauty direction with refined finish.",
+    alt: "Timeless beauty portrait",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1785101717/Photo_Jun_28_2025_6_36_01_PM_wmho9u.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "tb-series-2",
+    sessionName: "Timeless Series II",
+    sessionDate: "Collection II",
+    isSessionCover: true,
+  },
+  {
+    id: "tb-2-photo2",
+    title: "Timeless Look 03",
+    label: "Timeless",
+    note: "Classic beauty direction with refined finish.",
+    alt: "Timeless beauty portrait",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1785101718/Photo_Jun_28_2025_6_38_43_PM_qh0roy.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "tb-series-2",
+    sessionName: "Timeless Series II",
+    sessionDate: "Collection II",
+  },
+  {
+    id: "tb-2-video",
+    title: "Timeless Look 02 - Video",
+    label: "Timeless",
+    note: "Video capture of timeless look.",
+    alt: "Timeless beauty video",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/video/upload/v1785101718/Video_Jul_24_2025_8_54_19_PM_uv7qjo.mov",
+    width: 1080,
+    height: 1920,
+    sessionId: "tb-series-2",
+    sessionName: "Timeless Series II",
+    sessionDate: "Collection II",
+    isVideo: true,
+  },
+
+  // Session 3: Timeless Series III
+  {
+    id: "tb-3-photo",
+    title: "Timeless Look 04",
+    label: "Timeless",
+    note: "Classic beauty direction with refined finish.",
+    alt: "Timeless beauty portrait",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1785101719/Photo_Jun_06_2026_11_26_54_AM_wbffg5.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "tb-series-3",
+    sessionName: "Timeless Series III",
+    sessionDate: "Collection III",
+    isSessionCover: true,
+  },
+  {
+    id: "tb-3-video",
+    title: "Timeless Look 04 - Video",
+    label: "Timeless",
+    note: "Video capture of timeless look.",
+    alt: "Timeless beauty video",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/video/upload/v1785101720/Video_Jun_13_2026_11_57_09_AM_rnovam.mov",
+    width: 1080,
+    height: 1920,
+    sessionId: "tb-series-3",
+    sessionName: "Timeless Series III",
+    sessionDate: "Collection III",
+    isVideo: true,
+  },
+
+  // Session 4: Timeless Series IV
+  {
+    id: "tb-4-photo1",
+    title: "Timeless Look 05",
+    label: "Timeless",
+    note: "Classic beauty direction with refined finish.",
+    alt: "Timeless beauty portrait",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1785101716/Photo_Jun_28_2025_5_13_03_PM_ytbuu4.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "tb-series-4",
+    sessionName: "Timeless Series IV",
+    sessionDate: "Collection IV",
+    isSessionCover: true,
+  },
+  {
+    id: "tb-4-photo2",
+    title: "Timeless Look 06",
+    label: "Timeless",
+    note: "Classic beauty direction with refined finish.",
+    alt: "Timeless beauty portrait",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1785101717/Photo_Jun_28_2025_5_13_20_PM_t0oczn.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "tb-series-4",
+    sessionName: "Timeless Series IV",
+    sessionDate: "Collection IV",
+  },
+  {
+    id: "tb-4-video",
+    title: "Timeless Look 05 - Video",
+    label: "Timeless",
+    note: "Video capture of timeless look.",
+    alt: "Timeless beauty video",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/video/upload/v1785101717/Video_Jul_03_2025_11_05_59_PM_fvxhfn.mov",
+    width: 1080,
+    height: 1920,
+    sessionId: "tb-series-4",
+    sessionName: "Timeless Series IV",
+    sessionDate: "Collection IV",
+    isVideo: true,
+  },
+];
+
 export function getPortfolioModule(slug: string) {
   return portfolioModules.find((module) => module.slug === slug);
 }
@@ -530,6 +678,9 @@ export function getPortfolioModule(slug: string) {
 export async function getPortfolioAssets(slug?: string) {
   if (slug === "editorials") {
     return { assets: editorialAssets, source: "editorials" as const };
+  }
+  if (slug === "timeless-beauty") {
+    return { assets: timelessAssets, source: "timeless-beauty" as const };
   }
 
   const cloudName = process.env.CLOUDINARY_CLOUD_NAME;

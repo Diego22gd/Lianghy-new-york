@@ -155,6 +155,7 @@ body:has(.home-page) .site-nav-links::before {
 }
 
 @media (min-width: 641px) {
+
   .site-nav .brand-mark,
   .site-nav .nav-link,
   .site-nav .nav-dropdown-item,
@@ -368,12 +369,11 @@ body:has(.home-page) .site-nav-links::before {
 .hero-overlay {
   pointer-events: none;
   background:
-    linear-gradient(180deg, 
-      rgba(15, 6, 8, 0.65) 0%, 
-      rgba(15, 6, 8, 0.18) 35%, 
-      rgba(15, 6, 8, 0.3) 65%, 
-      rgba(15, 6, 8, 0.85) 100%
-    ),
+    linear-gradient(180deg,
+      rgba(15, 6, 8, 0.65) 0%,
+      rgba(15, 6, 8, 0.18) 35%,
+      rgba(15, 6, 8, 0.3) 65%,
+      rgba(15, 6, 8, 0.85) 100%),
     radial-gradient(circle at center, transparent 30%, rgba(15, 6, 8, 0.55) 100%);
 }
 
@@ -615,8 +615,8 @@ body:has(.home-page) .logo-halo {
 }
 
 .feature-card,
-.split-layout > div,
-.contact-panel > div {
+.split-layout>div,
+.contact-panel>div {
   padding: 1.25rem;
   border: 1px solid var(--line);
   border-radius: 1.75rem;
@@ -1027,9 +1027,12 @@ body:has(.home-page) .logo-halo {
 }
 
 @keyframes contactIconBreathing {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 4px 14px rgba(63, 13, 23, 0.08);
   }
+
   50% {
     box-shadow: 0 0 18px rgba(138, 69, 82, 0.32);
   }
@@ -1490,10 +1493,12 @@ body:has(.home-page) .logo-halo {
 }
 
 @keyframes logoFloat {
+
   0%,
   100% {
     transform: translateY(0px) scale(1);
   }
+
   50% {
     transform: translateY(-12px) scale(1.02);
   }
@@ -1504,6 +1509,7 @@ body:has(.home-page) .logo-halo {
     opacity: 0;
     transform: translateY(18px) scale(0.96);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -1511,11 +1517,13 @@ body:has(.home-page) .logo-halo {
 }
 
 @keyframes haloPulse {
+
   0%,
   100% {
     opacity: 0.72;
     transform: scale(0.96);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.06);
@@ -1523,6 +1531,7 @@ body:has(.home-page) .logo-halo {
 }
 
 @media (max-width: 900px) {
+
   .card-grid,
   .split-layout,
   .contact-panel {
@@ -1949,11 +1958,11 @@ body:has(.home-page) .logo-halo {
 
   .portfolio-brand,
   .portfolio-hero-copy,
-  .portfolio-section-head > div {
+  .portfolio-section-head>div {
     justify-items: center;
   }
 
-  .portfolio-section-head > div {
+  .portfolio-section-head>div {
     display: grid;
     justify-items: center;
     width: 100%;

@@ -191,7 +191,7 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
                       loading="lazy"
                     />
                     <div className="portfolio-session-overlay">
-                      <span className="portfolio-session-badge">{session.count} Photos</span>
+                      <span className="portfolio-session-badge">{session.count} Media</span>
                     </div>
                   </button>
                 </article>
@@ -219,16 +219,27 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
                   aria-label={`Open ${asset.title} in full view`}
                   onClick={() => openAsset(asset, assets)}
                 >
-                  <img
-                    src={withTransform(
-                      asset.imageUrl,
-                      index === 0 ? "f_auto,q_auto,c_fill,g_auto,w_1200,h_760" : "f_auto,q_auto,c_fill,g_auto,w_700,h_880",
-                    )}
-                    alt={asset.alt}
-                    loading={index === 0 ? "eager" : "lazy"}
-                    width={asset.width}
-                    height={asset.height}
-                  />
+                  {asset.isVideo ? (
+                    <video
+                      src={asset.imageUrl}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                  ) : (
+                    <img
+                      src={withTransform(
+                        asset.imageUrl,
+                        index === 0 ? "f_auto,q_auto,c_fill,g_auto,w_1200,h_760" : "f_auto,q_auto,c_fill,g_auto,w_700,h_880",
+                      )}
+                      alt={asset.alt}
+                      loading={index === 0 ? "eager" : "lazy"}
+                      width={asset.width}
+                      height={asset.height}
+                    />
+                  )}
                 </button>
               </article>
             ))}
@@ -290,7 +301,7 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
               }}
               aria-label="Portfolio sequence"
             >
-            {featuredAssets.map((asset, index) => (
+            {featuredAssets.map((asset) => (
               <SwiperSlide key={asset.id} className="portfolio-swiper-slide">
                 <article className="portfolio-swiper-card">
                   <button
@@ -299,13 +310,24 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
                     aria-label={`Open ${asset.title} in full view`}
                     onClick={() => openAsset(asset, assets)}
                   >
-                    <img
-                      src={withTransform(asset.imageUrl, "f_auto,q_auto,c_fit,w_760,h_1180")}
-                      alt={asset.alt}
-                      loading="lazy"
-                      width={asset.width}
-                      height={asset.height}
-                    />
+                    {asset.isVideo ? (
+                      <video
+                        src={asset.imageUrl}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                      />
+                    ) : (
+                      <img
+                        src={withTransform(asset.imageUrl, "f_auto,q_auto,c_fit,w_760,h_1180")}
+                        alt={asset.alt}
+                        loading="lazy"
+                        width={asset.width}
+                        height={asset.height}
+                      />
+                    )}
                   </button>
                 </article>
               </SwiperSlide>
@@ -354,13 +376,25 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
           ) : null}
 
           <div className="portfolio-lightbox-stage" onClick={(event) => event.stopPropagation()}>
-            <img
-              className="portfolio-lightbox-image"
-              src={withTransform(currentAsset.imageUrl, "f_auto,q_auto,w_1800")}
-              alt={currentAsset.alt}
-              width={currentAsset.width}
-              height={currentAsset.height}
-            />
+            {currentAsset.isVideo ? (
+              <video
+                className="portfolio-lightbox-image"
+                src={currentAsset.imageUrl}
+                controls
+                autoPlay
+                loop
+                playsInline
+                style={{ maxHeight: "calc(82vh - 2rem)", maxWidth: "100%", borderRadius: "8px" }}
+              />
+            ) : (
+              <img
+                className="portfolio-lightbox-image"
+                src={withTransform(currentAsset.imageUrl, "f_auto,q_auto,w_1800")}
+                alt={currentAsset.alt}
+                width={currentAsset.width}
+                height={currentAsset.height}
+              />
+            )}
             <div className="portfolio-lightbox-caption">
               <p>{selectedIndex + 1} / {activeAssetsList.length}</p>
             </div>
