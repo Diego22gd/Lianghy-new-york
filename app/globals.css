@@ -2111,8 +2111,8 @@ body:has(.home-page) .logo-halo {
 
 .portfolio-session-trigger img {
   width: 100%;
-  aspect-ratio: 4 / 4.8;
-  max-height: 320px;
+  aspect-ratio: 4 / 5.2;
+  max-height: 370px;
   object-fit: cover;
   object-position: center 15%;
   display: block;

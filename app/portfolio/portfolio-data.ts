@@ -568,7 +568,6 @@ export const timelessAssets: PortfolioAsset[] = [
     sessionId: "tb-series-2",
     sessionName: "Timeless Series II",
     sessionDate: "Collection II",
-    isSessionCover: true,
   },
   {
     id: "tb-2-photo2",
@@ -582,6 +581,7 @@ export const timelessAssets: PortfolioAsset[] = [
     sessionId: "tb-series-2",
     sessionName: "Timeless Series II",
     sessionDate: "Collection II",
+    isSessionCover: true,
   },
   {
     id: "tb-2-video",
