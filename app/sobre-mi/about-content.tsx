@@ -40,38 +40,10 @@ const galleryItems: AboutMediaItem[] = [
     category: "Video Reel",
   },
   {
-    id: "about-media-2",
-    type: "image",
-    url: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1784902706/Photo_May_08_2025_5_32_23_PM_lcfatu.jpg",
-    title: "Luminous Skin & Makeup Focus",
-    category: "Featured Work",
-  },
-  {
-    id: "about-media-3",
-    type: "image",
-    url: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1784902712/Photo_Jul_21_2026_11_33_27_AM_8_rqslbv.jpg",
-    title: "Editorial Makeup Look",
-    category: "Featured Work",
-  },
-  {
     id: "about-media-4",
     type: "image",
     url: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1784902710/Photo_Jul_21_2026_11_33_27_AM_7_hwyly3.jpg",
     title: "Hairstyling & Polished Finish",
-    category: "Featured Work",
-  },
-  {
-    id: "about-media-5",
-    type: "image",
-    url: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1784902707/Photo_Jul_21_2026_11_33_27_AM_6_ymgpbs.jpg",
-    title: "Beauty Direction Campaign",
-    category: "Featured Work",
-  },
-  {
-    id: "about-media-6",
-    type: "image",
-    url: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1784902711/Photo_Jan_10_2026_11_16_54_PM_o4kgwt.jpg",
-    title: "Editorial Beauty Work",
     category: "Featured Work",
   },
   {
