@@ -1,14 +1,32 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+
+export const metadata: Metadata = {
+  title: "Lianghy | New York Luxury Makeup & Hairstyling",
+  description:
+    "Refined makeup and hairstyling studio in New York City for brides, editorials, and private clients. Timeless beauty, modern artistry, crafted with intention.",
+  openGraph: {
+    title: "Lianghy | New York Luxury Makeup & Hairstyling",
+    description:
+      "Refined makeup and hairstyling studio in New York City for brides, editorials, and private clients.",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dqcpmau9i/image/upload/q_auto/f_auto/v1778703619/Mira-7423_leg8rt.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Lianghy Studio Cover",
+      },
+    ],
+  },
+};
 
 export default function Home() {
   return (
     <main className="home-page">
+      <h1 className="sr-only">Lianghy Studio — Luxury Makeup &amp; Hairstyling in New York</h1>
       <Image
         src="/portada.jpg"
-        alt="Lhiangy Studio Cover Desktop"
+        alt="Lianghy Studio Cover Desktop"
         fill
         priority
         sizes="(max-width: 768px) 1px, 100vw"
@@ -16,7 +34,7 @@ export default function Home() {
       />
       <Image
         src="/portadatelefono.jpg"
-        alt="Lhiangy Studio Cover Mobile"
+        alt="Lianghy Studio Cover Mobile"
         fill
         priority
         sizes="(max-width: 768px) 100vw, 1px"
@@ -28,7 +46,7 @@ export default function Home() {
       <section className="hero-content hero-content-minimal">
         <Image
           src="/logo.png"
-          alt="Lhiangy"
+          alt="Lianghy"
           width={575}
           height={575}
           priority
@@ -37,22 +55,22 @@ export default function Home() {
           className="hero-logo hero-logo-large"
         />
         <div className="hero-copy hero-copy-minimal">
-          <span className="hero-eyebrow">New York Makeup & Hair</span>
+          <span className="hero-eyebrow">New York Makeup &amp; Hair</span>
           <p className="hero-tagline">Timeless Beauty. Modern Artistry. Crafted with intention.</p>
           <p className="hero-subtext">
-            Luxury makeup & hairstyling for brides, editorials and private clients.
+            Luxury makeup &amp; hairstyling for brides, editorials and private clients.
           </p>
         </div>
 
         <div className="hero-mission-vision">
           <div className="mission-vision-card">
-            <h3 className="mission-vision-title">Misión</h3>
+            <h2 className="mission-vision-title">Misión</h2>
             <p className="mission-vision-text">
               To provide refined makeup and hairstyling services that celebrate each client’s unique beauty through personalized artistry, attention to detail, and a commitment to excellence. Every experience is designed to inspire confidence, elegance, and lasting memories.
             </p>
           </div>
           <div className="mission-vision-card">
-            <h3 className="mission-vision-title">Visión</h3>
+            <h2 className="mission-vision-title">Visión</h2>
             <p className="mission-vision-text">
               To become a trusted artist in the beauty industry, known for timeless artistry, uncompromising excellence, and a heart for serving every client. Through continuous growth and limitless creativity, my vision is to create beauty that empowers confidence and honors the uniqueness of every person.
             </p>

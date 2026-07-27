@@ -1,14 +1,26 @@
 :root {
-  --background: #f2ebe1;
-  --background-strong: #e8dccd;
-  --surface: rgba(255, 255, 255, 0.5);
-  --surface-strong: rgba(63, 13, 23, 0.82);
-  --text: #2a1818;
-  --muted: rgba(42, 24, 24, 0.72);
-  --accent: #8a4552;
+  --font-display: "Bacalisties", serif;
+  --font-body: "Jost", sans-serif;
+  --bg-deep: #16080b;
+  --bg-surface: #220e13;
+  --bg-surface-soft: #2e141a;
+  --accent: #d8a4ac;
+  --accent-light: #f3e6e8;
   --accent-deep: #5c1a28;
-  --line: rgba(92, 26, 40, 0.16);
-  --shadow: 0 20px 60px rgba(63, 13, 23, 0.15);
+  --accent-glow: rgba(216, 164, 172, 0.35);
+  --line: rgba(216, 164, 172, 0.2);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 * {

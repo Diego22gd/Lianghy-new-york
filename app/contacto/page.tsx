@@ -1,113 +1,25 @@
-"use client";
+import type { Metadata } from "next";
+import { ContactContent } from "./contact-content";
 
-import { motion, useReducedMotion } from "framer-motion";
-
-const contactItems = [
-  {
-    label: "Email",
-    value: "lianghym14@gmail.com",
-    href: "mailto:lianghym14@gmail.com",
-    iconSrc: "/icons/email.png",
-    external: false,
+export const metadata: Metadata = {
+  title: "Contacto | Book Lianghy Makeup & Hair Studio NYC",
+  description:
+    "Get in touch with Lianghy Beauty Studio in New York City. Bookings for bridal makeup, hairstyling, editorial campaigns, and private clients.",
+  openGraph: {
+    title: "Contacto | Book Lianghy Makeup & Hair Studio NYC",
+    description:
+      "Get in touch with Lianghy Beauty Studio in New York City. Bookings for bridal, editorial, and private clients.",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dqcpmau9i/image/upload/q_auto/f_auto/v1778702933/Rolando.Acunam_RWarehouse047_kpan2u.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Lianghy Studio",
+      },
+    ],
   },
-  {
-    label: "Instagram",
-    value: "@lianghyy",
-    href: "https://instagram.com/lianghyy",
-    iconSrc: "/icons/instagram.png",
-    external: true,
-  },
-  {
-    label: "WhatsApp",
-    value: "+1 (786) 967-4376",
-    href: "https://wa.me/17869674376",
-    iconSrc: "/icons/whatsapp.png",
-    external: true,
-  },
-  {
-    label: "Location",
-    value: "New York City, available for destination bookings.",
-    href: "https://maps.google.com/?q=New+York+City",
-    iconSrc: "/icons/location.png",
-    external: true,
-  },
-] as const;
-
-const ease = [0.22, 1, 0.36, 1] as const;
+};
 
 export default function ContactPage() {
-  const prefersReducedMotion = useReducedMotion();
-
-  const revealFromSide = (x: number, delay = 0) =>
-    prefersReducedMotion
-      ? {}
-      : {
-          initial: { opacity: 0, x },
-          whileInView: { opacity: 1, x: 0 },
-          viewport: { once: true, amount: 0.28 },
-          transition: { duration: 0.9, delay, ease },
-        };
-
-  const revealUp = (delay = 0) =>
-    prefersReducedMotion
-      ? {}
-      : {
-          initial: { opacity: 0, y: 24 },
-          whileInView: { opacity: 1, y: 0 },
-          viewport: { once: true, amount: 0.28 },
-          transition: { duration: 0.72, delay, ease },
-        };
-
-  return (
-    <main className="inner-page contact-page">
-      <section className="contact-editorial">
-        <motion.div className="contact-editorial-copy" {...revealFromSide(-56)}>
-          <span className="contact-kicker">Contact</span>
-          <h1 className="contact-display-title">
-            Let&apos;s
-            <span>Connect</span>
-          </h1>
-          <div className="contact-divider" />
-
-          <motion.p className="contact-lead" {...revealUp(0.14)}>
-            I&apos;d love to hear from you. Whether you have a question, want to collaborate or you are ready to book, feel free to reach out.
-          </motion.p>
-
-          <div className="contact-editorial-links">
-            {contactItems.map((item, index) => (
-              <motion.a
-                key={item.label}
-                className="contact-editorial-item"
-                href={item.href}
-                target={item.external ? "_blank" : undefined}
-                rel={item.external ? "noreferrer" : undefined}
-                {...revealUp(0.18 + index * 0.08)}
-              >
-                <span className="contact-item-icon" aria-hidden="true">
-                  <img src={item.iconSrc} alt={`${item.label} icon`} className="contact-icon-img" />
-                </span>
-                <span className="contact-item-copy">
-                  <strong>{item.label}</strong>
-                  <span>{item.value}</span>
-                </span>
-              </motion.a>
-            ))}
-          </div>
-
-          <motion.p className="contact-signature-note" {...revealUp(0.5)}>
-            Let&apos;s create something beautiful together.
-          </motion.p>
-        </motion.div>
-
-        <motion.figure className="contact-editorial-visual" {...revealFromSide(56, 0.06)}>
-          <div className="contact-photo-frame">
-            <img
-              src="https://res.cloudinary.com/dqcpmau9i/image/upload/q_auto/f_auto/v1778702933/Rolando.Acunam_RWarehouse047_kpan2u.jpg"
-              alt="Editorial beauty portrait for the contact section."
-            />
-          </div>
-        </motion.figure>
-      </section>
-    </main>
-  );
+  return <ContactContent />;
 }
