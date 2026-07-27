@@ -313,6 +313,7 @@ export const editorialAssets: PortfolioAsset[] = [
     sessionId: "series-ii-b",
     sessionName: "Editorial Series II - Part 2",
     sessionDate: "Collection II-B",
+    excludeFromCarousel: true,
   },
   {
     id: "edit-series-2-6",
@@ -578,6 +579,7 @@ export const keyProjectsAssets: PortfolioAsset[] = [
     sessionId: "kp-series-2",
     sessionName: "Key Projects Series II",
     sessionDate: "Collection II",
+    excludeFromCarousel: true,
   },
   {
     id: "kp-2-photo5",
@@ -591,6 +593,7 @@ export const keyProjectsAssets: PortfolioAsset[] = [
     sessionId: "kp-series-2",
     sessionName: "Key Projects Series II",
     sessionDate: "Collection II",
+    excludeFromCarousel: true,
   },
   {
     id: "kp-2-photo6",
@@ -617,6 +620,7 @@ export const keyProjectsAssets: PortfolioAsset[] = [
     sessionId: "kp-series-2",
     sessionName: "Key Projects Series II",
     sessionDate: "Collection II",
+    excludeFromCarousel: true,
   },
   {
     id: "kp-2-photo8",
@@ -630,6 +634,7 @@ export const keyProjectsAssets: PortfolioAsset[] = [
     sessionId: "kp-series-2",
     sessionName: "Key Projects Series II",
     sessionDate: "Collection II",
+    excludeFromCarousel: true,
   },
   {
     id: "kp-2-photo9",
@@ -643,6 +648,7 @@ export const keyProjectsAssets: PortfolioAsset[] = [
     sessionId: "kp-series-2",
     sessionName: "Key Projects Series II",
     sessionDate: "Collection II",
+    excludeFromCarousel: true,
   },
 
   // Session 1: Key Projects Series I
@@ -672,6 +678,7 @@ export const keyProjectsAssets: PortfolioAsset[] = [
     sessionId: "kp-series-1",
     sessionName: "Key Projects Series I",
     sessionDate: "Collection I",
+    excludeFromCarousel: true,
   },
   {
     id: "kp-1-photo3",
@@ -879,6 +886,7 @@ export const keyProjectsAssets: PortfolioAsset[] = [
     sessionId: "kp-series-5",
     sessionName: "Key Projects Series V",
     sessionDate: "Collection V",
+    excludeFromCarousel: true,
   },
   {
     id: "kp-5-photo3",
