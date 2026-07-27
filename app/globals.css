@@ -193,6 +193,10 @@ body:has(.home-page) .site-nav-links::before {
   }
 }
 
+.hero-eyebrow {
+  color: #fff9f2 !important;
+}
+
 .brand-mark,
 .nav-link,
 .nav-dropdown-item,
@@ -675,7 +679,7 @@ body:has(.home-page) .logo-halo {
 .card-index,
 .contact-label,
 .page-eyebrow {
-  color: var(--accent);
+  color: var(--accent-deep);
 }
 
 .split-layout {
@@ -795,7 +799,7 @@ body:has(.home-page) .logo-halo {
 .contact-kicker {
   display: inline-block;
   margin-bottom: 1rem;
-  color: var(--accent);
+  color: var(--accent-deep);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   font-size: 0.78rem;
@@ -818,7 +822,7 @@ body:has(.home-page) .logo-halo {
   font-family: var(--font-display), serif;
   font-size: clamp(4rem, 8vw, 7rem);
   letter-spacing: 0;
-  color: var(--accent);
+  color: var(--accent-deep);
 }
 
 .about-divider,
@@ -1169,7 +1173,7 @@ body:has(.home-page) .logo-halo {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--accent);
+  color: var(--accent-deep);
   font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.12em;
@@ -1178,7 +1182,7 @@ body:has(.home-page) .logo-halo {
 
 .portfolio-chip::before {
   content: "/";
-  color: rgba(138, 69, 82, 0.7);
+  color: rgba(92, 26, 40, 0.7);
 }
 
 .portfolio-hero {
@@ -1215,7 +1219,7 @@ body:has(.home-page) .logo-halo {
 }
 
 .portfolio-script-note {
-  color: var(--accent-soft, #a56f7f);
+  color: var(--accent-deep);
   font-family: var(--font-body), sans-serif;
   font-size: 0.82rem;
   letter-spacing: 0.18em;
@@ -1225,7 +1229,7 @@ body:has(.home-page) .logo-halo {
 .portfolio-title,
 .portfolio-section-head h2 {
   margin: 0;
-  color: var(--accent);
+  color: var(--accent-deep);
 }
 
 .portfolio-title {
@@ -1259,7 +1263,7 @@ body:has(.home-page) .logo-halo {
   padding: 0.8rem 1.15rem;
   border: 1px solid rgba(94, 23, 41, 0.18);
   background: rgba(255, 251, 245, 0.72);
-  color: var(--accent);
+  color: var(--accent-deep);
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.12em;
