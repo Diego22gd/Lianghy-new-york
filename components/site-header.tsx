@@ -62,16 +62,20 @@ export function SiteHeader() {
               Portfolio
             </button>
             <div className="nav-dropdown-menu">
-              {portfolioModules.map((item) => (
-                <Link
-                  key={item.slug}
-                  className="nav-dropdown-item is-current"
-                  href={`/portfolio/${item.slug}`}
-                  onClick={closeMobileMenu}
-                >
-                  {item.menuLabel}
-                </Link>
-              ))}
+              {portfolioModules.map((item) => {
+                const href = `/portfolio/${item.slug}`;
+                const isCurrent = pathname === href;
+                return (
+                  <Link
+                    key={item.slug}
+                    className={`nav-dropdown-item ${isCurrent ? "is-current" : ""}`}
+                    href={href}
+                    onClick={closeMobileMenu}
+                  >
+                    {item.menuLabel}
+                  </Link>
+                );
+              })}
             </div>
           </div>
           <Link className="nav-link" href="/sobre-mi" onClick={closeMobileMenu}>
