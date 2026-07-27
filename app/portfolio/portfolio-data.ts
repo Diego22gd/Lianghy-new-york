@@ -551,7 +551,6 @@ export const keyProjectsAssets: PortfolioAsset[] = [
     sessionId: "kp-series-2",
     sessionName: "Key Projects Series II",
     sessionDate: "Collection II",
-    isSessionCover: true,
   },
   {
     id: "kp-2-photo3",
@@ -565,6 +564,7 @@ export const keyProjectsAssets: PortfolioAsset[] = [
     sessionId: "kp-series-2",
     sessionName: "Key Projects Series II",
     sessionDate: "Collection II",
+    isSessionCover: true,
   },
   {
     id: "kp-2-photo4",
@@ -658,6 +658,7 @@ export const keyProjectsAssets: PortfolioAsset[] = [
     sessionId: "kp-series-1",
     sessionName: "Key Projects Series I",
     sessionDate: "Collection I",
+    isSessionCover: true,
   },
   {
     id: "kp-1-photo2",
@@ -684,7 +685,6 @@ export const keyProjectsAssets: PortfolioAsset[] = [
     sessionId: "kp-series-1",
     sessionName: "Key Projects Series I",
     sessionDate: "Collection I",
-    isSessionCover: true,
   },
   {
     id: "kp-1-photo4",
