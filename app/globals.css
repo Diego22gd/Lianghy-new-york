@@ -141,7 +141,7 @@ body:has(.home-page) .site-header {
 }
 
 body:has(.home-page) .site-nav {
-  color: var(--accent-deep);
+  color: var(--accent-deep) !important;
   border-color: transparent;
   background: transparent;
   backdrop-filter: none;
@@ -152,7 +152,7 @@ body:has(.home-page) .nav-toggle,
 body:has(.home-page) .nav-link,
 body:has(.home-page) .nav-dropdown-item,
 body:has(.home-page) .nav-summary {
-  color: var(--accent-deep);
+  color: var(--accent-deep) !important;
 }
 
 body:has(.home-page) .site-nav-links {
@@ -176,14 +176,18 @@ body:has(.home-page) .site-nav-links::before {
   }
 
   body:has(.home-page) .site-nav {
-    color: var(--accent-deep);
+    color: var(--accent-deep) !important;
   }
 
   body:has(.home-page) .nav-toggle,
   body:has(.home-page) .nav-link,
   body:has(.home-page) .nav-summary {
-    color: var(--accent-deep);
+    color: var(--accent-deep) !important;
   }
+}
+
+.hero-eyebrow {
+  color: var(--accent-deep) !important;
 }
 
 .brand-mark,
@@ -372,7 +376,7 @@ body:has(.home-page) .site-nav-links::before {
   justify-items: center;
   gap: 0.95rem;
   text-align: center;
-  color: #fff8f2;
+  color: var(--accent-deep) !important;
 }
 
 .hero-content-minimal {
@@ -438,7 +442,7 @@ body:has(.home-page) .logo-halo {
   font-size: clamp(0.95rem, 1.8vw, 1.15rem);
   font-weight: 600;
   letter-spacing: 0.04em;
-  color: var(--accent-deep);
+  color: var(--accent-deep) !important;
   margin: 0;
 }
 
@@ -446,7 +450,7 @@ body:has(.home-page) .logo-halo {
   font-family: var(--font-body), sans-serif;
   font-size: 0.94rem;
   letter-spacing: 0.02em;
-  color: var(--accent-deep);
+  color: var(--accent-deep) !important;
   font-weight: 400;
   margin: 0;
 }
@@ -480,7 +484,7 @@ body:has(.home-page) .logo-halo {
   font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: 0.12em;
-  color: var(--accent-deep);
+  color: var(--accent-deep) !important;
   text-transform: uppercase;
   border: 0;
   padding-bottom: 0;
@@ -491,7 +495,7 @@ body:has(.home-page) .logo-halo {
   font-family: var(--font-body), sans-serif;
   font-size: 0.88rem;
   line-height: 1.6;
-  color: var(--accent-deep);
+  color: var(--accent-deep) !important;
   font-weight: 400;
 }
 
@@ -560,7 +564,7 @@ body:has(.home-page) .logo-halo {
 
 .hero-copy-minimal p {
   font-size: 0.98rem;
-  color: rgba(255, 248, 242, 0.92);
+  color: var(--accent-deep) !important;
 }
 
 .inner-page {
