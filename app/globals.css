@@ -176,13 +176,17 @@ body:has(.home-page) .site-nav-links::before {
   }
 
   body:has(.home-page) .site-nav {
-    color: var(--accent-deep) !important;
+    color: #fff9f2 !important;
   }
 
-  body:has(.home-page) .nav-toggle,
-  body:has(.home-page) .nav-link,
-  body:has(.home-page) .nav-dropdown-item,
-  body:has(.home-page) .nav-summary {
+  body:has(.home-page) .site-nav .nav-link,
+  body:has(.home-page) .site-nav .nav-summary,
+  body:has(.home-page) .site-nav .nav-toggle,
+  body:has(.home-page) .site-nav .brand-mark {
+    color: #fff9f2 !important;
+  }
+
+  body:has(.home-page) .nav-dropdown-item {
     color: var(--accent-deep) !important;
   }
 }
