@@ -21,6 +21,7 @@ export type PortfolioAsset = {
   isSessionCover?: boolean;
   excludeFromCarousel?: boolean;
   isVideo?: boolean;
+  isHeroOnly?: boolean;
 };
 
 export type PortfolioModule = {
@@ -536,9 +537,7 @@ export const keyProjectsAssets: PortfolioAsset[] = [
     imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1785264497/Photo_Mar_10_2025_6_01_28_PM_gwd8ks.jpg",
     width: 3024,
     height: 4032,
-    sessionId: "kp-series-3",
-    sessionName: "Key Projects Series III",
-    sessionDate: "Collection III",
+    isHeroOnly: true,
   },
   {
     id: "kp-3-photo1",

@@ -92,7 +92,7 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
   }, [selectedIndex, activeAssetsList]);
 
   const galleryAssets = assets;
-  const featuredAssets = assets.filter((asset) => !asset.excludeFromCarousel && !asset.isVideo);
+  const featuredAssets = assets.filter((asset) => !asset.isHeroOnly && !asset.excludeFromCarousel && !asset.isVideo);
   const heroAsset = assets[0];
 
   const openAsset = (asset: PortfolioAsset, sessionList?: PortfolioAsset[]) => {
