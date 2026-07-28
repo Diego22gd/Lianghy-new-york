@@ -64,13 +64,13 @@ export default function Home() {
 
         <div className="hero-mission-vision hero-mission-vision-desktop">
           <div className="mission-vision-card">
-            <h2 className="mission-vision-title">Misión</h2>
+            <h2 className="mission-vision-title">Mission</h2>
             <p className="mission-vision-text">
               To provide refined makeup and hairstyling services that celebrate each client’s unique beauty through personalized artistry, attention to detail, and a commitment to excellence. Every experience is designed to inspire confidence, elegance, and lasting memories.
             </p>
           </div>
           <div className="mission-vision-card">
-            <h2 className="mission-vision-title">Visión</h2>
+            <h2 className="mission-vision-title">Vision</h2>
             <p className="mission-vision-text">
               To become a trusted artist in the beauty industry, known for timeless artistry, uncompromising excellence, and a heart for serving every client. Through continuous growth and limitless creativity, my vision is to create beauty that empowers confidence and honors the uniqueness of every person.
             </p>
@@ -81,13 +81,13 @@ export default function Home() {
       <section className="hero-mission-vision-section-mobile">
         <div className="hero-mission-vision hero-mission-vision-mobile">
           <div className="mission-vision-card">
-            <h2 className="mission-vision-title">Misión</h2>
+            <h2 className="mission-vision-title">Mission</h2>
             <p className="mission-vision-text">
               To provide refined makeup and hairstyling services that celebrate each client’s unique beauty through personalized artistry, attention to detail, and a commitment to excellence. Every experience is designed to inspire confidence, elegance, and lasting memories.
             </p>
           </div>
           <div className="mission-vision-card">
-            <h2 className="mission-vision-title">Visión</h2>
+            <h2 className="mission-vision-title">Vision</h2>
             <p className="mission-vision-text">
               To become a trusted artist in the beauty industry, known for timeless artistry, uncompromising excellence, and a heart for serving every client. Through continuous growth and limitless creativity, my vision is to create beauty that empowers confidence and honors the uniqueness of every person.
             </p>

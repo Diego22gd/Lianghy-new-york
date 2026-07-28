@@ -26,7 +26,7 @@ const contactItems = [
   },
   {
     label: "Location",
-    value: "New York City, available for destination bookings.",
+    value: "Nueva York",
     href: "https://maps.google.com/?q=New+York+City",
     iconSrc: "/icons/location.png",
     external: true,

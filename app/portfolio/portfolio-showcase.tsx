@@ -17,6 +17,13 @@ function withTransform(url: string, transform: string) {
   return url.includes("/upload/") ? url.replace("/upload/", `/upload/${transform}/`) : url;
 }
 
+function formatVideoUrl(url: string) {
+  if (!url) return url;
+  if (!url.includes("/upload/")) return url;
+  if (url.includes("ac_none,so_0,eo_10")) return url;
+  return url.replace("/upload/", "/upload/ac_none,so_0,eo_10,f_mp4,q_auto/").replace(/\.mov$/, ".mp4");
+}
+
 const ease = [0.22, 1, 0.36, 1] as const;
 
 export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
@@ -221,7 +228,7 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
                 >
                   {asset.isVideo ? (
                     <video
-                      src={asset.imageUrl}
+                      src={formatVideoUrl(asset.imageUrl)}
                       autoPlay
                       loop
                       muted
@@ -382,11 +389,12 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
                 controls
                 autoPlay
                 loop
+                muted
                 playsInline
                 preload="metadata"
                 style={{ maxHeight: "calc(82vh - 2rem)", maxWidth: "100%", borderRadius: "8px" }}
               >
-                <source src={currentAsset.imageUrl} type="video/mp4" />
+                <source src={formatVideoUrl(currentAsset.imageUrl)} type="video/mp4" />
                 Tu navegador no soporta la reproducción de video.
               </video>
             ) : (

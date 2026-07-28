@@ -25,7 +25,7 @@ const aboutParagraphs = [
   },
   {
     text: "Alongside client work, I test and review beauty products with an honest eye so I can recommend the right finish, texture and overall balance for each look.",
-    image: "https://res.cloudinary.com/dqcpmau9i/image/upload/f_auto,q_auto/v1784902706/Photo_Jul_21_2026_11_33_27_AM_5_lrqdgf.jpg",
+    image: "https://res.cloudinary.com/dqcpmau9i/image/upload/f_auto,q_auto/v1785177717/Photo_Jul_27_2026_11_09_35_AM_1_capcw3.jpg",
     alt: "Editorial makeup detail 3",
   },
 ];
@@ -34,8 +34,8 @@ const galleryItems: AboutMediaItem[] = [
   {
     id: "about-media-1",
     type: "video",
-    url: "https://res.cloudinary.com/dqcpmau9i/video/upload/v1784902702/Video_Feb_12_2026_11_46_10_AM_lxlbby.mov",
-    videoMp4Url: "https://res.cloudinary.com/dqcpmau9i/video/upload/f_mp4,q_auto/v1784902702/Video_Feb_12_2026_11_46_10_AM_lxlbby.mp4",
+    url: "https://res.cloudinary.com/dqcpmau9i/video/upload/ac_none,so_0,eo_10,f_mp4,q_auto/v1784902702/Video_Feb_12_2026_11_46_10_AM_lxlbby.mp4",
+    videoMp4Url: "https://res.cloudinary.com/dqcpmau9i/video/upload/ac_none,so_0,eo_10,f_mp4,q_auto/v1784902702/Video_Feb_12_2026_11_46_10_AM_lxlbby.mp4",
     title: "Glam & Hair Prep Reel",
     category: "Video Reel",
   },
@@ -56,7 +56,7 @@ const galleryItems: AboutMediaItem[] = [
   {
     id: "about-media-8",
     type: "image",
-    url: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1784902705/Photo_Jul_21_2026_11_33_27_AM_4_odkcyk.jpg",
+    url: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1785177765/Photo_Feb_09_2026_12_59_20_PM_pzihfk.jpg",
     title: "Editorial Makeup Direction",
     category: "Featured Work",
   },
