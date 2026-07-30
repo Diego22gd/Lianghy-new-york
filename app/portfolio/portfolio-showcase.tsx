@@ -179,7 +179,7 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
             <div className="portfolio-section-head">
               <div>
                 <span className="portfolio-script-note">Sessions</span>
-                <h2>Editorial Sessions</h2>
+                <h2>{module.title} Sessions</h2>
                 <p>Click any session to view its full gallery.</p>
               </div>
             </div>
