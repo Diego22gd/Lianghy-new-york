@@ -20,8 +20,8 @@ function withTransform(url: string, transform: string) {
 function formatVideoUrl(url: string) {
   if (!url) return url;
   if (!url.includes("/upload/")) return url;
-  if (url.includes("ac_none,so_0,eo_10")) return url;
-  return url.replace("/upload/", "/upload/ac_none,so_0,eo_10,f_mp4,q_auto/").replace(/\.mov$/, ".mp4");
+  if (url.includes("ac_none,so_0,eo_8")) return url;
+  return url.replace("/upload/", "/upload/ac_none,so_0,eo_8,f_mp4,q_auto/").replace(/\.mov$/, ".mp4");
 }
 
 const ease = [0.22, 1, 0.36, 1] as const;
