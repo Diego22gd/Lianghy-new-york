@@ -72,15 +72,6 @@ export const portfolioModules: PortfolioModule[] = [
     sequenceHeading: "Glam sequence",
   },
   {
-    slug: "bridesmaid-crew",
-    menuLabel: "Bridesmaid Crew",
-    title: "Bridesmaid Crew",
-    subtitle: "Soft coordination across multiple faces, keeping tone, timing and finish aligned for the full bridal party.",
-    tags: ["Bridal", "Crew", "Soft Glam", "Harmony"],
-    galleryHeading: "Crew highlights",
-    sequenceHeading: "Crew sequence",
-  },
-  {
     slug: "timeless-beauty",
     menuLabel: "Timeless Beauty",
     title: "Timeless Beauty",
