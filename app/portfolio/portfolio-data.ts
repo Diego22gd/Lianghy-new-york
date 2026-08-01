@@ -22,6 +22,7 @@ export type PortfolioAsset = {
   excludeFromCarousel?: boolean;
   isVideo?: boolean;
   isHeroOnly?: boolean;
+  coverObjectPosition?: string;
 };
 
 export type PortfolioModule = {
@@ -1191,6 +1192,7 @@ export const socialGlamAssets: PortfolioAsset[] = [
     sessionName: "Social Glam Series II",
     sessionDate: "Collection II",
     isSessionCover: true,
+    coverObjectPosition: "center 0%",
   },
   {
     id: "sg-2-video1",
@@ -1395,6 +1397,33 @@ export const socialGlamAssets: PortfolioAsset[] = [
     sessionDate: "Collection VII",
     isSessionCover: true,
   },
+  {
+    id: "sg-7-photo2",
+    title: "Social Glam Look 11-B",
+    label: "Social Glam",
+    note: "High-finish glam look with polished glow.",
+    alt: "Social Glam makeup look",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1785269263/Photo_Apr_16_2026_1_42_57_PM_icuubf.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "sg-series-7",
+    sessionName: "Social Glam Series VII",
+    sessionDate: "Collection VII",
+  },
+  {
+    id: "sg-7-video1",
+    title: "Social Glam Look 11 - Video",
+    label: "Social Glam",
+    note: "Video capture of social glam look.",
+    alt: "Social Glam makeup video",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/video/upload/ac_none,so_0,eo_8,f_mp4,q_auto/v1785269291/Video_May_08_2026_3_19_37_PM_vusfib.mp4",
+    width: 1080,
+    height: 1920,
+    sessionId: "sg-series-7",
+    sessionName: "Social Glam Series VII",
+    sessionDate: "Collection VII",
+    isVideo: true,
+  },
 
   // Session 8: Jun 06-11, 2026
   {
@@ -1464,6 +1493,93 @@ export const socialGlamAssets: PortfolioAsset[] = [
     sessionId: "sg-series-8",
     sessionName: "Social Glam Series VIII",
     sessionDate: "Collection VIII",
+    isVideo: true,
+  },
+
+  // Session 9: Feb 14, 2026
+  {
+    id: "sg-9-photo1",
+    title: "Social Glam Look 15",
+    label: "Social Glam",
+    note: "High-finish glam look with polished glow.",
+    alt: "Social Glam makeup look",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1785269263/Photo_Feb_14_2026_2_11_26_PM_r1uuld.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "sg-series-9",
+    sessionName: "Social Glam Series IX",
+    sessionDate: "Collection IX",
+    isSessionCover: true,
+  },
+  {
+    id: "sg-9-photo2",
+    title: "Social Glam Look 16",
+    label: "Social Glam",
+    note: "High-finish glam look with polished glow.",
+    alt: "Social Glam makeup look",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1785268799/Photo_Feb_14_2026_11_21_00_AM_arktqg.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "sg-series-9",
+    sessionName: "Social Glam Series IX",
+    sessionDate: "Collection IX",
+  },
+  {
+    id: "sg-9-video1",
+    title: "Social Glam Look 15 - Video 1",
+    label: "Social Glam",
+    note: "Video capture of social glam look.",
+    alt: "Social Glam makeup video",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/video/upload/ac_none,so_0,eo_8,f_mp4,q_auto/v1785270063/Video_Feb_14_2026_2_11_21_PM_tbu03f.mp4",
+    width: 1080,
+    height: 1920,
+    sessionId: "sg-series-9",
+    sessionName: "Social Glam Series IX",
+    sessionDate: "Collection IX",
+    isVideo: true,
+  },
+  {
+    id: "sg-9-video2",
+    title: "Social Glam Look 15 - Video 2",
+    label: "Social Glam",
+    note: "Video capture of social glam look.",
+    alt: "Social Glam makeup video",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/video/upload/ac_none,so_0,eo_8,f_mp4,q_auto/v1785270063/Video_Feb_14_2026_11_20_57_AM_n6zcfx.mp4",
+    width: 1080,
+    height: 1920,
+    sessionId: "sg-series-9",
+    sessionName: "Social Glam Series IX",
+    sessionDate: "Collection IX",
+    isVideo: true,
+  },
+
+  // Session 10: Jun 06, 2026
+  {
+    id: "sg-10-photo1",
+    title: "Social Glam Look 17",
+    label: "Social Glam",
+    note: "High-finish glam look with polished glow.",
+    alt: "Social Glam makeup look",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1785269275/Photo_Jun_06_2026_4_17_37_PM_j4nbha.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "sg-series-10",
+    sessionName: "Social Glam Series X",
+    sessionDate: "Collection X",
+    isSessionCover: true,
+  },
+  {
+    id: "sg-10-video1",
+    title: "Social Glam Look 17 - Video",
+    label: "Social Glam",
+    note: "Video capture of social glam look.",
+    alt: "Social Glam makeup video",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/video/upload/ac_none,so_0,eo_8,f_mp4,q_auto/v1785270063/Video_Jun_06_2026_4_17_14_PM_rr3pli.mp4",
+    width: 1080,
+    height: 1920,
+    sessionId: "sg-series-10",
+    sessionName: "Social Glam Series X",
+    sessionDate: "Collection X",
     isVideo: true,
   },
 ];

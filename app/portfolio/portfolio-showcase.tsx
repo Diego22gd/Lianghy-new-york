@@ -196,6 +196,7 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
                       src={withTransform(session.cover.imageUrl, "f_auto,q_auto,c_fill,g_auto:subject,w_650,h_780")}
                       alt={session.name}
                       loading="lazy"
+                      style={session.cover.coverObjectPosition ? { objectPosition: session.cover.coverObjectPosition } : undefined}
                     />
                     <div className="portfolio-session-overlay">
                       <span className="portfolio-session-badge">{session.count} Media</span>
