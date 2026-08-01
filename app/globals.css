@@ -893,30 +893,36 @@ body:has(.home-page) .logo-halo {
 }
 
 .about-passage-quote {
-  margin: 2rem 0 0;
-  padding: 1.25rem 1.5rem;
-  border-left: 2px solid var(--accent);
-  background: rgba(255, 255, 255, 0.025);
-  border-radius: 0 8px 8px 0;
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 860px;
+  margin: 4rem auto 1.5rem;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--accent);
+  border-bottom: 1px solid var(--accent);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 4px;
 }
 
 .about-passage-text {
   margin: 0;
   font-family: var(--font-display), serif;
-  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  font-size: clamp(1.4rem, 2.8vw, 1.85rem);
   font-style: italic;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--foreground);
+  letter-spacing: 0.01em;
 }
 
 .about-passage-cite {
   display: block;
-  margin-top: 0.6rem;
+  margin-top: 1.25rem;
   font-family: var(--font-body), sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-style: normal;
-  font-weight: 500;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent);
 }

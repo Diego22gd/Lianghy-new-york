@@ -150,13 +150,6 @@ export function AboutContent() {
           <motion.p className="about-script-note" {...revealUp(0.34)}>
             Soft structure, luminous skin and a finish that feels personal.
           </motion.p>
-
-          <motion.blockquote className="about-passage-quote" {...revealUp(0.4)}>
-            <p className="about-passage-text">
-              &ldquo;Whatever you do, work heartily, as for the Lord and not for men, knowing that from the Lord you will receive the inheritance as your reward.&rdquo;
-            </p>
-            <cite className="about-passage-cite">— Colossians 3:23-24</cite>
-          </motion.blockquote>
         </motion.div>
       </section>
 
@@ -194,6 +187,14 @@ export function AboutContent() {
           ))}
         </div>
       </section>
+
+      {/* Highlighted Verse Passage Section */}
+      <motion.blockquote className="about-passage-quote" {...revealUp(0.2)}>
+        <p className="about-passage-text">
+          &ldquo;Whatever you do, work heartily, as for the Lord and not for men, knowing that from the Lord you will receive the inheritance as your reward.&rdquo;
+        </p>
+        <cite className="about-passage-cite">— Colossians 3:23-24</cite>
+      </motion.blockquote>
 
       {/* Lightbox Modal for About Gallery */}
       {selectedIdx !== null && activeItem && (
