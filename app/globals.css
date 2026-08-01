@@ -892,6 +892,35 @@ body:has(.home-page) .logo-halo {
   letter-spacing: 0;
 }
 
+.about-passage-quote {
+  margin: 2rem 0 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 2px solid var(--accent);
+  background: rgba(255, 255, 255, 0.025);
+  border-radius: 0 8px 8px 0;
+}
+
+.about-passage-text {
+  margin: 0;
+  font-family: var(--font-display), serif;
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--foreground);
+}
+
+.about-passage-cite {
+  display: block;
+  margin-top: 0.6rem;
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
 .about-gallery-section {
   margin-top: 4rem;
   padding-top: 3rem;
