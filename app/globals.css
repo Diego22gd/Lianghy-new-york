@@ -2491,12 +2491,79 @@ body:has(.home-page) .logo-halo {
   transform: translateY(-1px);
 }
 
-.contact-error-banner {
-  padding: 0.75rem 1rem;
-  background: rgba(220, 53, 69, 0.15);
-  border: 1px solid rgba(220, 53, 69, 0.3);
-  color: #ff8888;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  margin-bottom: 1rem;
-}
+.contact-item-btn {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Modal Overlay & Container */
+.contact-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.contact-modal-card {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #111111;
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.85);
+  color: #ffffff;
+}
+
+.contact-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.contact-modal-title {
+  font-family: var(--font-display, serif);
+  font-size: 1.8rem;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-top: 0.2rem;
+}
+
+.contact-modal-close {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.contact-modal-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.08);
+}
+
