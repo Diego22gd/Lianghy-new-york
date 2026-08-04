@@ -85,7 +85,6 @@ const jsonLd = {
     "addressCountry": "US"
   },
   "telephone": "+17869674376",
-  "email": "lianghym14@gmail.com",
   "url": "https://lianghy.com",
   "sameAs": [
     "https://instagram.com/lianghyy"
