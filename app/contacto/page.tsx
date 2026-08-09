@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { ContactContent } from "./contact-content";
 
 export const metadata: Metadata = {
-  title: "Contacto | Book Lianghy Makeup & Hair Studio NYC",
+  title: "Contact | Book Lianghy Makeup & Hair Studio NYC",
   description:
     "Get in touch with Lianghy Beauty Studio in New York City. Bookings for bridal makeup, hairstyling, editorial campaigns, and private clients.",
   openGraph: {
-    title: "Contacto | Book Lianghy Makeup & Hair Studio NYC",
+    title: "Contact | Book Lianghy Makeup & Hair Studio NYC",
     description:
       "Get in touch with Lianghy Beauty Studio in New York City. Bookings for bridal, editorial, and private clients.",
     images: [

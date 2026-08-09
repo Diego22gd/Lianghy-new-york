@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     // Return fake success so bots do not retry or detect the trap.
     if (b_website_url && b_website_url.trim().length > 0) {
       return NextResponse.json(
-        { success: true, message: "Mensaje recibido correctamente." },
+        { success: true, message: "Message received successfully." },
         { status: 200 }
       );
     }
@@ -19,7 +19,7 @@ export async function POST(request: Request) {
       const duration = Date.now() - Number(timestamp);
       if (duration < 1500) {
         return NextResponse.json(
-          { success: true, message: "Mensaje recibido correctamente." },
+          { success: true, message: "Message received successfully." },
           { status: 200 }
         );
       }
@@ -28,7 +28,7 @@ export async function POST(request: Request) {
     // 3. Validation
     if (!name || !name.trim() || !email || !email.trim() || !message || !message.trim()) {
       return NextResponse.json(
-        { success: false, error: "Por favor completa todos los campos requeridos." },
+        { success: false, error: "Please fill in all required fields." },
         { status: 400 }
       );
     }
@@ -36,13 +36,13 @@ export async function POST(request: Request) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { success: false, error: "Por favor ingresa un correo electrónico válido." },
+        { success: false, error: "Please enter a valid email address." },
         { status: 400 }
       );
     }
 
     // 4. Log or dispatch message
-    console.log("Nueva consulta de contacto recibida:", {
+    console.log("New contact inquiry received:", {
       name,
       email,
       service: service || "General",
@@ -55,14 +55,14 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         success: true,
-        message: "¡Gracias! Tu mensaje ha sido enviado exitosamente. Nos pondremos en contacto contigo pronto.",
+        message: "Thank you! Your message has been sent successfully. We will contact you soon.",
       },
       { status: 200 }
     );
   } catch (error) {
-    console.error("Error al procesar formulario de contacto:", error);
+    console.error("Error processing contact form:", error);
     return NextResponse.json(
-      { success: false, error: "Hubo un error al procesar tu solicitud. Por favor intenta más tarde." },
+      { success: false, error: "There was an error processing your request. Please try again later." },
       { status: 500 }
     );
   }

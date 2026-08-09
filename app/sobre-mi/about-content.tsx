@@ -34,8 +34,8 @@ const galleryItems: AboutMediaItem[] = [
   {
     id: "about-media-1",
     type: "video",
-    url: "https://res.cloudinary.com/dqcpmau9i/video/upload/ac_none,so_0,eo_8,f_mp4,q_auto/v1784902702/Video_Feb_12_2026_11_46_10_AM_lxlbby.mp4",
-    videoMp4Url: "https://res.cloudinary.com/dqcpmau9i/video/upload/ac_none,so_0,eo_8,f_mp4,q_auto/v1784902702/Video_Feb_12_2026_11_46_10_AM_lxlbby.mp4",
+    url: "https://res.cloudinary.com/dqcpmau9i/video/upload/ac_none,so_0,eo_4,f_mp4,q_auto/v1784902702/Video_Feb_12_2026_11_46_10_AM_lxlbby.mp4",
+    videoMp4Url: "https://res.cloudinary.com/dqcpmau9i/video/upload/ac_none,so_0,eo_4,f_mp4,q_auto/v1784902702/Video_Feb_12_2026_11_46_10_AM_lxlbby.mp4",
     title: "Glam & Hair Prep Reel",
     category: "Video Reel",
   },

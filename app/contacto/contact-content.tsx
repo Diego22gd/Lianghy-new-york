@@ -4,11 +4,11 @@ import { useState, useEffect, FormEvent } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 
 const serviceOptions = [
-  "Bridal Makeup & Hair (Novias)",
-  "Editorial & Campaign (Moda / Editorial)",
-  "Special Event & Red Carpet (Eventos)",
-  "Private Studio Session (Consulta Privada)",
-  "Otros / General",
+  "Bridal Makeup & Hair",
+  "Editorial & Campaign",
+  "Special Event & Red Carpet",
+  "Private Studio Session",
+  "Other / General Inquiry",
 ];
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -86,11 +86,11 @@ export function ContactContent() {
         });
       } else {
         setStatus("error");
-        setErrorMessage(data.error || "Hubo un problema al enviar tu mensaje. Intenta nuevamente.");
+        setErrorMessage(data.error || "There was a problem sending your message. Please try again.");
       }
     } catch {
       setStatus("error");
-      setErrorMessage("No se pudo conectar con el servidor. Verifica tu conexión.");
+      setErrorMessage("Could not connect to the server. Please check your internet connection.");
     }
   };
 
@@ -118,7 +118,7 @@ export function ContactContent() {
     <main className="inner-page contact-page">
       <section className="contact-editorial">
         <motion.div className="contact-editorial-copy" {...revealFromSide(-56)}>
-          <span className="contact-kicker">Contacto & Consultas</span>
+          <span className="contact-kicker">Contact & Inquiries</span>
           <h1 className="contact-display-title">
             Let&apos;s
             <span>Connect</span>
@@ -142,7 +142,7 @@ export function ContactContent() {
               </span>
               <span className="contact-item-copy">
                 <strong>Email</strong>
-                <span>Enviar mensaje por formulario</span>
+                <span>Send message via form</span>
               </span>
             </motion.button>
 
@@ -193,7 +193,7 @@ export function ContactContent() {
               </span>
               <span className="contact-item-copy">
                 <strong>Location</strong>
-                <span>Nueva York</span>
+                <span>New York City</span>
               </span>
             </motion.a>
           </div>
@@ -230,16 +230,16 @@ export function ContactContent() {
             >
               <div className="contact-modal-header">
                 <div>
-                  <span className="contact-kicker">Contacto por Email</span>
+                  <span className="contact-kicker">Email Contact</span>
                   <h2 id="modal-title" className="contact-modal-title">
-                    Enviar Mensaje
+                    Send Message
                   </h2>
                 </div>
                 <button
                   type="button"
                   className="contact-modal-close"
                   onClick={() => setIsModalOpen(false)}
-                  aria-label="Cerrar formulario"
+                  aria-label="Close form"
                 >
                   ✕
                 </button>
@@ -248,22 +248,22 @@ export function ContactContent() {
               {status === "success" ? (
                 <div className="contact-success-banner">
                   <div className="success-icon">✓</div>
-                  <h3>¡Mensaje Enviado con Éxito!</h3>
-                  <p>Gracias por contactarnos. Responderemos a tu consulta lo antes posible.</p>
+                  <h3>Message Sent Successfully!</h3>
+                  <p>Thank you for reaching out. We will get back to your inquiry as soon as possible.</p>
                   <div className="success-actions">
                     <button
                       type="button"
                       className="contact-btn-secondary"
                       onClick={() => setStatus("idle")}
                     >
-                      Enviar otro mensaje
+                      Send another message
                     </button>
                     <button
                       type="button"
                       className="contact-btn-secondary"
                       onClick={() => setIsModalOpen(false)}
                     >
-                      Cerrar ventana
+                      Close window
                     </button>
                   </div>
                 </div>
@@ -285,24 +285,24 @@ export function ContactContent() {
 
                   <div className="form-grid">
                     <div className="form-group">
-                      <label htmlFor="contact-name">Nombre completo *</label>
+                      <label htmlFor="contact-name">Full Name *</label>
                       <input
                         id="contact-name"
                         type="text"
                         required
-                        placeholder="Tu nombre y apellido"
+                        placeholder="Your first and last name"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       />
                     </div>
 
                     <div className="form-group">
-                      <label htmlFor="contact-email">Correo electrónico *</label>
+                      <label htmlFor="contact-email">Email Address *</label>
                       <input
                         id="contact-email"
                         type="email"
                         required
-                        placeholder="tu.email@ejemplo.com"
+                        placeholder="your.email@example.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       />
@@ -310,7 +310,7 @@ export function ContactContent() {
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="contact-service">Servicio de interés</label>
+                    <label htmlFor="contact-service">Service of Interest</label>
                     <select
                       id="contact-service"
                       value={formData.service}
@@ -325,12 +325,12 @@ export function ContactContent() {
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="contact-message">Mensaje / Detalles del Evento *</label>
+                    <label htmlFor="contact-message">Message / Event Details *</label>
                     <textarea
                       id="contact-message"
                       required
                       rows={4}
-                      placeholder="Cuéntanos sobre tu fecha, locación en NYC o consulta específica..."
+                      placeholder="Tell us about your event date, NYC location, or specific inquiry..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     />
@@ -346,9 +346,9 @@ export function ContactContent() {
                     className="contact-submit-btn"
                   >
                     {status === "submitting" ? (
-                      <span className="submit-spinner">Enviando mensaje...</span>
+                      <span className="submit-spinner">Sending message...</span>
                     ) : (
-                      <span>Enviar Mensaje</span>
+                      <span>Send Message</span>
                     )}
                   </button>
                 </form>
