@@ -1292,7 +1292,7 @@ body:has(.home-page) .logo-halo {
 }
 
 .portfolio-description {
-  max-width: 30ch;
+  max-width: 46ch;
   font-size: 1.06rem;
   line-height: 1.9;
 }
@@ -2238,16 +2238,20 @@ body:has(.home-page) .logo-halo {
   color: rgba(255, 255, 255, 0.82);
 }
 
-.portfolio-session-info h3 {
-  margin: 0 0 0.25rem;
-  font-size: 1.25rem;
+.portfolio-session-info h3,
+.portfolio-session-title {
+  margin: 0;
+  font-size: 1.05rem;
   font-weight: 600;
-  color: #fff8f2;
+  line-height: 1.35;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .portfolio-session-info p {
-  margin: 0;
-  font-size: 0.88rem;
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
   opacity: 0.85;
 }
 

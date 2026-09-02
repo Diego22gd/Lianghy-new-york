@@ -203,6 +203,9 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
                     />
                     <div className="portfolio-session-overlay">
                       <span className="portfolio-session-badge">{session.count} Media</span>
+                      <div className="portfolio-session-info">
+                        <h3 className="portfolio-session-title">{session.name}</h3>
+                      </div>
                     </div>
                   </button>
                 </article>
@@ -411,7 +414,10 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
               />
             )}
             <div className="portfolio-lightbox-caption">
-              <p>{selectedIndex + 1} / {activeAssetsList.length}</p>
+              <p>
+                {currentAsset.sessionName ? `${currentAsset.sessionName} • ` : ""}
+                {selectedIndex + 1} / {activeAssetsList.length}
+              </p>
             </div>
           </div>
         </div>
