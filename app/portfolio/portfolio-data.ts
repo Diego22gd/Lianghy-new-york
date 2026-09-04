@@ -81,6 +81,15 @@ export const portfolioModules: PortfolioModule[] = [
     galleryHeading: "Timeless looks",
     sequenceHeading: "Beauty sequence",
   },
+  {
+    slug: "hair",
+    menuLabel: "Hair",
+    title: "Hair",
+    subtitle: "A dedicated collection showcasing creative hair styling, texture, structure and editorial hair direction.",
+    tags: ["Hair", "Styling", "Texture", "Editorial"],
+    galleryHeading: "Hair sessions",
+    sequenceHeading: "Hair sequence",
+  },
 ];
 
 export const curatedAssets: PortfolioAsset[] = [
@@ -2460,6 +2469,138 @@ export const photoshootAssets: PortfolioAsset[] = [
   },
 ];
 
+export const hairAssets: PortfolioAsset[] = [
+  // Session 1: Hair Series I
+  {
+    id: "hair-1-photo1",
+    title: "Hair Style 01",
+    label: "Hair",
+    note: "Creative hair styling and texture work.",
+    alt: "Hair styling portrait",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1788527431/IMG_6547_xfkhtf.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "hair-series-1",
+    sessionName: "Hair Series I",
+    sessionDate: "Collection I",
+    isSessionCover: true,
+  },
+  {
+    id: "hair-1-photo2",
+    title: "Hair Style 02",
+    label: "Hair",
+    note: "Creative hair styling and texture work.",
+    alt: "Hair styling portrait",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1788527430/IMG_6519_t5rq6x.heic",
+    width: 1400,
+    height: 1750,
+    sessionId: "hair-series-1",
+    sessionName: "Hair Series I",
+    sessionDate: "Collection I",
+  },
+  {
+    id: "hair-1-photo3",
+    title: "Hair Style 03",
+    label: "Hair",
+    note: "Creative hair styling and texture work.",
+    alt: "Hair styling portrait",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1788527430/IMG_6520_dtu074.heic",
+    width: 1400,
+    height: 1750,
+    sessionId: "hair-series-1",
+    sessionName: "Hair Series I",
+    sessionDate: "Collection I",
+  },
+
+  // Session 2: Hair Series II
+  {
+    id: "hair-2-photo1",
+    title: "Hair Style 04",
+    label: "Hair",
+    note: "Creative hair styling and texture work.",
+    alt: "Hair styling portrait",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1788527434/IMG_7931_zcgfbr.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "hair-series-2",
+    sessionName: "Hair Series II",
+    sessionDate: "Collection II",
+    isSessionCover: true,
+  },
+  {
+    id: "hair-2-photo2",
+    title: "Hair Style 05",
+    label: "Hair",
+    note: "Creative hair styling and texture work.",
+    alt: "Hair styling portrait",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1788527434/IMG_7932_wgki8o.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "hair-series-2",
+    sessionName: "Hair Series II",
+    sessionDate: "Collection II",
+  },
+
+  // Session 3: Hair Series III
+  {
+    id: "hair-3-photo1",
+    title: "Hair Style 06",
+    label: "Hair",
+    note: "Creative hair styling and texture work.",
+    alt: "Hair styling portrait",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1788527433/IMG_7930_1_brkjwh.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "hair-series-3",
+    sessionName: "Hair Series III",
+    sessionDate: "Collection III",
+    isSessionCover: true,
+  },
+  {
+    id: "hair-3-photo2",
+    title: "Hair Style 07",
+    label: "Hair",
+    note: "Creative hair styling and texture work.",
+    alt: "Hair styling portrait",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1788527432/IMG_7929_1_ow98fw.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "hair-series-3",
+    sessionName: "Hair Series III",
+    sessionDate: "Collection III",
+  },
+
+  // Session 4: Hair Series IV
+  {
+    id: "hair-4-photo1",
+    title: "Hair Style 08",
+    label: "Hair",
+    note: "Creative hair styling and texture work.",
+    alt: "Hair styling portrait",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1788527429/Photo_Aug_29_2026_4_20_09_PM_taxmpa.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "hair-series-4",
+    sessionName: "Hair Series IV",
+    sessionDate: "Collection IV",
+    isSessionCover: true,
+  },
+  {
+    id: "hair-4-video",
+    title: "Hair Style 08 - Video",
+    label: "Hair",
+    note: "Video capture of hair styling.",
+    alt: "Hair styling video",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/video/upload/ac_none,so_0,eo_4,f_mp4,q_auto/v1788527430/Video_Sep_03_2026_6_23_13_PM_r7ceyz.mp4",
+    width: 1080,
+    height: 1920,
+    sessionId: "hair-series-4",
+    sessionName: "Hair Series IV",
+    sessionDate: "Collection IV",
+    isVideo: true,
+  },
+];
+
 export function getPortfolioModule(slug: string) {
   return portfolioModules.find((module) => module.slug === slug);
 }
@@ -2479,6 +2620,9 @@ export async function getPortfolioAssets(slug?: string) {
   }
   if (slug === "photoshoot") {
     return { assets: photoshootAssets, source: "photoshoot" as const };
+  }
+  if (slug === "hair") {
+    return { assets: hairAssets, source: "hair" as const };
   }
 
   const cloudName = process.env.CLOUDINARY_CLOUD_NAME;
