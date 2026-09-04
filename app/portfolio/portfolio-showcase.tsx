@@ -162,9 +162,11 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
             <motion.h1 className="portfolio-title" initial={false} animate={canAnimate ? { opacity: [0, 1], y: [32, 0] } : undefined} transition={{ duration: 0.85, delay: 0.12, ease }}>
               {module.title}
             </motion.h1>
-            <motion.p className="portfolio-description" initial={false} animate={canAnimate ? { opacity: [0, 1], y: [18, 0] } : undefined} transition={{ duration: 0.7, delay: 0.22, ease }}>
-              {module.subtitle}
-            </motion.p>
+            {module.subtitle ? (
+              <motion.p className="portfolio-description" initial={false} animate={canAnimate ? { opacity: [0, 1], y: [18, 0] } : undefined} transition={{ duration: 0.7, delay: 0.22, ease }}>
+                {module.subtitle}
+              </motion.p>
+            ) : null}
             <motion.div className="portfolio-action-row" initial={false} animate={canAnimate ? { opacity: [0, 1], y: [14, 0] } : undefined} transition={{ duration: 0.7, delay: 0.28, ease }}>
               <a className="portfolio-link" href={sessionGroups.length > 0 ? "#portfolio-sessions" : "#portfolio-gallery"}>
                 {sessionGroups.length > 0 ? "View Sessions" : "View Gallery"}
@@ -203,9 +205,11 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
                     />
                     <div className="portfolio-session-overlay">
                       <span className="portfolio-session-badge">{session.count} Media</span>
-                      <div className="portfolio-session-info">
-                        <h3 className="portfolio-session-title">{session.name}</h3>
-                      </div>
+                      {session.name && !session.name.startsWith("Hair Series") && !session.name.startsWith("Photoshoot Series") && !session.name.startsWith("Editorial Series") && !session.name.startsWith("Timeless Series") && !session.name.startsWith("Glam Series") ? (
+                        <div className="portfolio-session-info">
+                          <h3 className="portfolio-session-title">{session.name}</h3>
+                        </div>
+                      ) : null}
                     </div>
                   </button>
                 </article>
@@ -415,7 +419,9 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
             )}
             <div className="portfolio-lightbox-caption">
               <p>
-                {currentAsset.sessionName ? `${currentAsset.sessionName} • ` : ""}
+                {currentAsset.sessionName && !currentAsset.sessionName.startsWith("Hair Series") && !currentAsset.sessionName.startsWith("Photoshoot Series") && !currentAsset.sessionName.startsWith("Editorial Series") && !currentAsset.sessionName.startsWith("Timeless Series") && !currentAsset.sessionName.startsWith("Glam Series")
+                  ? `${currentAsset.sessionName} • `
+                  : ""}
                 {selectedIndex + 1} / {activeAssetsList.length}
               </p>
             </div>
