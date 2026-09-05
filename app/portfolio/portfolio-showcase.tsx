@@ -23,7 +23,7 @@ function formatVideoUrl(url: string) {
   if (url.includes("ac_none,so_0,eo_8")) {
     return url.replace("ac_none,so_0,eo_8", "ac_none,so_0,eo_4");
   }
-  if (url.includes("ac_none,so_0,eo_4")) return url;
+  if (url.includes("ac_none,so_0,eo_")) return url;
   return url.replace("/upload/", "/upload/ac_none,so_0,eo_4,f_mp4,q_auto/").replace(/\.mov$/, ".mp4");
 }
 
