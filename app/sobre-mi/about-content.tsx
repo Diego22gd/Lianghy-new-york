@@ -14,7 +14,7 @@ type AboutMediaItem = {
 
 const aboutParagraphs = [
   {
-    text: "I am a professional makeup artist, hairstylist and content creator with over 5 years of experience, focused on creating looks that elevate each client's natural beauty.",
+    text: "I am a professional makeup artist, hairstylist and content creator with over 7 years of experience, focused on creating looks that elevate each client's natural beauty.",
     image: "https://res.cloudinary.com/dqcpmau9i/image/upload/f_auto,q_auto/v1784902703/Photo_Jul_21_2026_11_33_27_AM_xeuptb.jpg",
     alt: "Editorial makeup detail 1",
   },

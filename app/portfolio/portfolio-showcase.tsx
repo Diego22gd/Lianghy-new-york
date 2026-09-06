@@ -13,8 +13,12 @@ type PortfolioShowcaseProps = {
   module: PortfolioModule;
 };
 
-function withTransform(url: string, transform: string) {
-  return url.includes("/upload/") ? url.replace("/upload/", `/upload/${transform}/`) : url;
+function withTransform(url: string, transform: string, customTransform?: string) {
+  if (!url.includes("/upload/")) return url;
+  if (customTransform) {
+    return url.replace("/upload/", `/upload/${customTransform}/`);
+  }
+  return url.replace("/upload/", `/upload/${transform}/`);
 }
 
 function formatVideoUrl(url: string) {
@@ -25,6 +29,18 @@ function formatVideoUrl(url: string) {
   }
   if (url.includes("ac_none,so_0,eo_")) return url;
   return url.replace("/upload/", "/upload/ac_none,so_0,eo_4,f_mp4,q_auto/").replace(/\.mov$/, ".mp4");
+}
+
+function shouldShowSessionTitle(name?: string) {
+  if (!name) return false;
+  return (
+    !name.startsWith("Hair Series") &&
+    !name.startsWith("Photoshoot Series") &&
+    !name.startsWith("Editorial Series") &&
+    !name.startsWith("Timeless Series") &&
+    !name.startsWith("Social Glam") &&
+    !name.startsWith("Glam Series")
+  );
 }
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -59,6 +75,7 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
           cover: coverAsset,
           assets: sessionAssets,
           count: sessionAssets.length,
+          startsNewRow: coverAsset.startsNewRow,
         };
       })
     : [];
@@ -191,21 +208,25 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
 
             <div className="portfolio-session-grid">
               {sessionGroups.map((session) => (
-                <article key={session.id} className="portfolio-session-card">
+                <article
+                  key={session.id}
+                  className="portfolio-session-card"
+                  style={session.startsNewRow ? { gridColumnStart: 1 } : undefined}
+                >
                   <button
                     type="button"
                     className="portfolio-session-trigger"
                     onClick={() => openAsset(session.cover, session.assets)}
                   >
                     <img
-                      src={withTransform(session.cover.imageUrl, "f_auto,q_auto,c_fill,g_auto:subject,w_650,h_780")}
+                      src={withTransform(session.cover.imageUrl, "f_auto,q_auto,c_fill,g_auto:subject,w_650,h_780", session.cover.coverTransform)}
                       alt={session.name}
                       loading="lazy"
                       style={session.cover.coverObjectPosition ? { objectPosition: session.cover.coverObjectPosition } : undefined}
                     />
                     <div className="portfolio-session-overlay">
                       <span className="portfolio-session-badge">{session.count} Media</span>
-                      {session.name && !session.name.startsWith("Hair Series") && !session.name.startsWith("Photoshoot Series") && !session.name.startsWith("Editorial Series") && !session.name.startsWith("Timeless Series") && !session.name.startsWith("Glam Series") ? (
+                      {shouldShowSessionTitle(session.name) ? (
                         <div className="portfolio-session-info">
                           <h3 className="portfolio-session-title">{session.name}</h3>
                         </div>
@@ -419,7 +440,7 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
             )}
             <div className="portfolio-lightbox-caption">
               <p>
-                {currentAsset.sessionName && !currentAsset.sessionName.startsWith("Hair Series") && !currentAsset.sessionName.startsWith("Photoshoot Series") && !currentAsset.sessionName.startsWith("Editorial Series") && !currentAsset.sessionName.startsWith("Timeless Series") && !currentAsset.sessionName.startsWith("Glam Series")
+                {shouldShowSessionTitle(currentAsset.sessionName)
                   ? `${currentAsset.sessionName} • `
                   : ""}
                 {selectedIndex + 1} / {activeAssetsList.length}

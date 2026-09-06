@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       "Get in touch with Lianghy Beauty Studio in New York City. Bookings for bridal, editorial, and private clients.",
     images: [
       {
-        url: "https://res.cloudinary.com/dqcpmau9i/image/upload/q_auto/f_auto/v1778702933/Rolando.Acunam_RWarehouse047_kpan2u.jpg",
+        url: "https://res.cloudinary.com/dqcpmau9i/image/upload/q_auto/f_auto/v1788720438/Rolando.Acunam_RileyR155_lubr1v.jpg",
         width: 1200,
         height: 630,
         alt: "Contact Lianghy Studio",
