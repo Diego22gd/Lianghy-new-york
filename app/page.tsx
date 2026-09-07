@@ -4,17 +4,17 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Lianghy | New York Luxury Makeup & Hairstyling",
   description:
-    "Refined makeup and hairstyling studio in New York City for brides, editorials, and private clients. Timeless beauty, modern artistry, crafted with intention.",
+    "Refined luxury makeup artist and hairstylist in New York City for brides, editorials, and private clients. Timeless beauty, modern artistry, crafted with intention.",
   openGraph: {
     title: "Lianghy | New York Luxury Makeup & Hairstyling",
     description:
-      "Refined makeup and hairstyling studio in New York City for brides, editorials, and private clients.",
+      "Refined luxury makeup artist and hairstylist in New York City for brides, editorials, and private clients.",
     images: [
       {
         url: "https://res.cloudinary.com/dqcpmau9i/image/upload/q_auto/f_auto/v1778703619/Mira-7423_leg8rt.jpg",
         width: 1200,
         height: 630,
-        alt: "Lianghy Studio Cover",
+        alt: "Lianghy Luxury Makeup & Hair",
       },
     ],
   },
@@ -23,10 +23,10 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="home-page">
-      <h1 className="sr-only">Lianghy Studio — Luxury Makeup &amp; Hairstyling in New York</h1>
+      <h1 className="sr-only">Lianghy — Luxury Makeup Artist &amp; Hairstylist in New York</h1>
       <Image
         src="/portada.jpg"
-        alt="Lianghy Studio Cover Desktop"
+        alt="Lianghy Luxury Makeup and Hair Cover Desktop"
         fill
         priority
         sizes="(max-width: 768px) 1px, 100vw"
@@ -34,7 +34,7 @@ export default function Home() {
       />
       <Image
         src="/portadatelefono.jpg"
-        alt="Lianghy Studio Cover Mobile"
+        alt="Lianghy Luxury Makeup and Hair Cover Mobile"
         fill
         priority
         sizes="(max-width: 768px) 100vw, 1px"

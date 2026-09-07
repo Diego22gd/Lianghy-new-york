@@ -20,35 +20,45 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://lianghy.com"),
   title: {
     default: "Lianghy | New York Luxury Makeup & Hairstyling",
-    template: "%s | Lianghy Beauty Studio",
+    template: "%s | Lianghy | Luxury Makeup Artist & Hairstylist NYC",
   },
   description:
-    "Refined makeup and hairstyling studio based in New York City for brides, editorials, and private clients. Timeless beauty, modern artistry, crafted with intention.",
+    "Refined luxury makeup artist and hairstylist based in New York City for brides, editorials, and private clients. Timeless beauty, modern artistry, crafted with intention.",
   keywords: [
     "New York makeup artist",
     "NYC hairstylist",
+    "New York hairstylist",
     "bridal makeup NYC",
     "luxury bridal hair",
     "editorial makeup artist New York",
     "Lianghy beauty",
-    "beauty studio NYC",
+    "luxury hair stylist NYC",
   ],
   authors: [{ name: "Lianghy" }],
   creator: "Lianghy",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   openGraph: {
     type: "website",
     locale: "es_US",
     url: "https://lianghy.com",
-    siteName: "Lianghy Beauty Studio",
+    siteName: "Lianghy",
     title: "Lianghy | New York Luxury Makeup & Hairstyling",
     description:
-      "Refined makeup and hairstyling studio based in New York City for brides, editorials, and private clients.",
+      "Refined luxury makeup artist and hairstylist based in New York City for brides, editorials, and private clients.",
     images: [
       {
         url: "https://res.cloudinary.com/dqcpmau9i/image/upload/q_auto/f_auto/v1778703619/Mira-7423_leg8rt.jpg",
         width: 1200,
         height: 630,
-        alt: "Lianghy Beauty Studio New York",
+        alt: "Lianghy Luxury Makeup Artist & Hairstylist New York",
       },
     ],
   },
@@ -56,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Lianghy | New York Luxury Makeup & Hairstyling",
     description:
-      "Refined makeup and hairstyling studio based in New York City for brides, editorials, and private clients.",
+      "Refined luxury makeup artist and hairstylist based in New York City for brides, editorials, and private clients.",
     images: ["https://res.cloudinary.com/dqcpmau9i/image/upload/q_auto/f_auto/v1778703619/Mira-7423_leg8rt.jpg"],
   },
   robots: {
@@ -74,10 +84,11 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "BeautySalon",
-  "name": "Lianghy Beauty Studio",
+  "@type": "Person",
+  "name": "Lianghy",
+  "jobTitle": "Luxury Makeup Artist & Hairstylist",
   "image": "https://res.cloudinary.com/dqcpmau9i/image/upload/q_auto/f_auto/v1778703619/Mira-7423_leg8rt.jpg",
-  "description": "Refined makeup and hairstyling services in New York City celebrating unique beauty for brides, editorials, and private clients.",
+  "description": "Refined luxury makeup artist and hairstylist based in New York City celebrating unique beauty for brides, editorials, and private clients.",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "New York",
@@ -88,8 +99,7 @@ const jsonLd = {
   "url": "https://lianghy.com",
   "sameAs": [
     "https://instagram.com/lianghyy"
-  ],
-  "priceRange": "$$$"
+  ]
 };
 
 export default function RootLayout({

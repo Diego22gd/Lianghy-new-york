@@ -7,7 +7,7 @@ const serviceOptions = [
   "Bridal Makeup & Hair",
   "Editorial & Campaign",
   "Special Event & Red Carpet",
-  "Private Studio Session",
+  "Private Hair & Makeup Session",
   "Other / General Inquiry",
 ];
 

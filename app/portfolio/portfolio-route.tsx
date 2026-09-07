@@ -14,11 +14,11 @@ export async function buildPortfolioMetadata(slug: string): Promise<Metadata> {
   const coverImage = assets[0]?.imageUrl || "https://res.cloudinary.com/dqcpmau9i/image/upload/q_auto/f_auto/v1778703619/Mira-7423_leg8rt.jpg";
 
   return {
-    title: `${module.menuLabel} | Lianghy Beauty Studio NYC`,
+    title: `${module.menuLabel} | Lianghy Makeup & Hair NYC`,
     description: module.subtitle,
     keywords: [module.menuLabel, ...module.tags, "New York makeup", "NYC hair", "Lianghy portfolio"],
     openGraph: {
-      title: `${module.menuLabel} | Lianghy Beauty Studio NYC`,
+      title: `${module.menuLabel} | Lianghy Makeup & Hair NYC`,
       description: module.subtitle,
       url: `https://lianghy.com/portfolio/${slug}`,
       images: [
@@ -32,7 +32,7 @@ export async function buildPortfolioMetadata(slug: string): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${module.menuLabel} | Lianghy Beauty Studio NYC`,
+      title: `${module.menuLabel} | Lianghy Makeup & Hair NYC`,
       description: module.subtitle,
       images: [coverImage],
     },
