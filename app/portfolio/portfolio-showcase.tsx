@@ -360,7 +360,7 @@ export function PortfolioShowcase({ assets, module }: PortfolioShowcaseProps) {
                       />
                     ) : (
                       <img
-                        src={withTransform(asset.imageUrl, "f_auto,q_auto,c_fit,w_760,h_1180")}
+                        src={withTransform(asset.imageUrl, "f_auto,q_auto,c_fill,g_auto:subject,w_800,h_1000")}
                         alt={asset.alt}
                         loading="lazy"
                         width={asset.width}

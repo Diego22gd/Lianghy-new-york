@@ -1425,16 +1425,18 @@ body:has(.home-page) .logo-halo {
 
 .portfolio-swiper-card {
   position: relative;
-  height: 640px;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  height: auto;
   max-height: 75vh;
   overflow: hidden;
-  border-radius: 0;
-  background: transparent;
+  border-radius: 12px;
+  background: rgba(42, 18, 24, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: none;
-  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(92, 26, 40, 0.08);
 }
 
 .portfolio-swiper-card .portfolio-media-trigger {
@@ -1450,7 +1452,7 @@ body:has(.home-page) .logo-halo {
 .portfolio-swiper-card img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center center;
   display: block;
   transform: scale(1);
@@ -2154,7 +2156,8 @@ body:has(.home-page) .logo-halo {
   }
 
   .portfolio-swiper-card {
-    height: 420px;
+    height: auto;
+    aspect-ratio: 4 / 5;
   }
 
   .portfolio-lightbox {
