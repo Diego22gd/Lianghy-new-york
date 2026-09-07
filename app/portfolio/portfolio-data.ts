@@ -1914,7 +1914,7 @@ export const socialGlamAssets: PortfolioAsset[] = [
     isVideo: true,
   },
 
-  // Session 8: Jun 06-11, 2026
+  // Session 8: Jun 06-11, 2026 - Part 1
   {
     id: "sg-8-photo1",
     title: "Social Glam Look 12",
@@ -1928,19 +1928,6 @@ export const socialGlamAssets: PortfolioAsset[] = [
     sessionName: "Social Glam Series VIII",
     sessionDate: "Collection VIII",
     isSessionCover: true,
-  },
-  {
-    id: "sg-8-photo2",
-    title: "Social Glam Look 13",
-    label: "Social Glam",
-    note: "High-finish glam look with polished glow.",
-    alt: "Social Glam makeup look",
-    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1785269271/Photo_Jun_06_2026_12_52_46_PM_qbxkil.jpg",
-    width: 1400,
-    height: 1750,
-    sessionId: "sg-series-8",
-    sessionName: "Social Glam Series VIII",
-    sessionDate: "Collection VIII",
   },
   {
     id: "sg-8-video1",
@@ -1970,18 +1957,34 @@ export const socialGlamAssets: PortfolioAsset[] = [
     sessionDate: "Collection VIII",
     isVideo: true,
   },
+
+  // Session 8-B: Jun 06, 2026 - Part 2
   {
-    id: "sg-8-video3",
-    title: "Social Glam Look 12 - Video 3",
+    id: "sg-8b-photo1",
+    title: "Social Glam Look 13",
+    label: "Social Glam",
+    note: "High-finish glam look with polished glow.",
+    alt: "Social Glam makeup look",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1785269271/Photo_Jun_06_2026_12_52_46_PM_qbxkil.jpg",
+    width: 1400,
+    height: 1750,
+    sessionId: "sg-series-8b",
+    sessionName: "Social Glam Series VIII-B",
+    sessionDate: "Collection VIII-B",
+    isSessionCover: true,
+  },
+  {
+    id: "sg-8b-video1",
+    title: "Social Glam Look 13 - Video",
     label: "Social Glam",
     note: "Video capture of social glam look.",
     alt: "Social Glam makeup video",
     imageUrl: "https://res.cloudinary.com/dqcpmau9i/video/upload/ac_none,so_0,eo_2,f_mp4,q_auto/v1785270065/Video_Jun_06_2026_12_44_10_PM_qpvw9u.mp4",
     width: 1920,
     height: 1080,
-    sessionId: "sg-series-8",
-    sessionName: "Social Glam Series VIII",
-    sessionDate: "Collection VIII",
+    sessionId: "sg-series-8b",
+    sessionName: "Social Glam Series VIII-B",
+    sessionDate: "Collection VIII-B",
     isVideo: true,
   },
 
