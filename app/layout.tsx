@@ -17,7 +17,7 @@ const bodyFont = Jost({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lianghy.com"),
+  metadataBase: new URL("https://www.lianghyy.com"),
   title: {
     default: "Lianghy | New York Luxury Makeup & Hairstyling",
     template: "%s | Lianghy | Luxury Makeup Artist & Hairstylist NYC",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_US",
-    url: "https://lianghy.com",
+    url: "https://www.lianghyy.com",
     siteName: "Lianghy",
     title: "Lianghy | New York Luxury Makeup & Hairstyling",
     description:
@@ -96,7 +96,7 @@ const jsonLd = {
     "addressCountry": "US"
   },
   "telephone": "+17869674376",
-  "url": "https://lianghy.com",
+  "url": "https://www.lianghyy.com",
   "sameAs": [
     "https://instagram.com/lianghyy"
   ]

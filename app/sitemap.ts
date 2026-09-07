@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { portfolioModules } from "./portfolio/portfolio-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://lianghy.com";
+  const baseUrl = "https://www.lianghyy.com";
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {

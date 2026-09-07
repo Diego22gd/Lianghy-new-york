@@ -20,7 +20,7 @@ export async function buildPortfolioMetadata(slug: string): Promise<Metadata> {
     openGraph: {
       title: `${module.menuLabel} | Lianghy Makeup & Hair NYC`,
       description: module.subtitle,
-      url: `https://lianghy.com/portfolio/${slug}`,
+      url: `https://www.lianghyy.com/portfolio/${slug}`,
       images: [
         {
           url: coverImage,

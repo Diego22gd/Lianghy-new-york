@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://lianghy.com/sitemap.xml",
+    sitemap: "https://www.lianghyy.com/sitemap.xml",
   };
 }
