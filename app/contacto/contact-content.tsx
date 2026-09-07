@@ -206,8 +206,8 @@ export function ContactContent() {
         <motion.figure className="contact-editorial-visual" {...revealFromSide(56, 0.06)}>
           <div className="contact-photo-frame">
             <img
-              src="https://res.cloudinary.com/dqcpmau9i/image/upload/q_auto/f_auto/v1788720438/Rolando.Acunam_RileyR155_lubr1v.jpg"
-              alt="Editorial beauty portrait for the contact section."
+              src="https://res.cloudinary.com/dqcpmau9i/image/upload/q_auto/f_auto/v1788755703/IMG_8010_q4ykvx.jpg"
+              alt="Lianghy makeup artistry in action for the contact section."
             />
           </div>
         </motion.figure>

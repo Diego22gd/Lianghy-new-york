@@ -208,7 +208,20 @@ export const curatedAssets: PortfolioAsset[] = [
 ];
 
 export const editorialAssets: PortfolioAsset[] = [
-  // Primary Editorial Hero Cover (3rd photo of Series II - Part 1)
+  // Main Hero Cover
+  {
+    id: "ed-hero-main",
+    title: "Editorial Main Cover",
+    label: "Editorial",
+    note: "High-concept beauty and editorial direction for fashion, print and digital media.",
+    alt: "Editorial hero portrait",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1788720438/Rolando.Acunam_RileyR155_lubr1v.jpg",
+    width: 2048,
+    height: 1365,
+    isHeroOnly: true,
+  },
+
+  // Series II - Part 1
   {
     id: "edit-series-2-3",
     title: "Editorial Look 05",
