@@ -1459,9 +1459,9 @@ export const timelessAssets: PortfolioAsset[] = [
     label: "Timeless Beauty",
     note: "Classic makeup direction with modern restraint, centered on skin, structure and a lasting elegant finish.",
     alt: "Timeless Beauty hero portrait",
-    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1788743270/Photo_Jun_06_2026_3_04_20_AM_nbf4r7.jpg",
-    width: 1400,
-    height: 1750,
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1788956653/IMG_8728_pgsw2x.jpg",
+    width: 3024,
+    height: 4032,
     isHeroOnly: true,
   },
 
@@ -2783,6 +2783,19 @@ export const photoshootAssets: PortfolioAsset[] = [
 ];
 
 export const hairAssets: PortfolioAsset[] = [
+  // Main Hero Cover
+  {
+    id: "hair-hero-main",
+    title: "Hair Main Cover",
+    label: "Hair",
+    note: "Modern hairstyling, refined textures and editorial hair direction.",
+    alt: "Hair hero portrait",
+    imageUrl: "https://res.cloudinary.com/dqcpmau9i/image/upload/v1788956548/Brooke7407961_svbka6.jpg",
+    width: 3277,
+    height: 4096,
+    isHeroOnly: true,
+  },
+
   // Session 1: Hair Series I
   {
     id: "hair-1-photo1",
